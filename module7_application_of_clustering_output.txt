@@ -1,0 +1,125 @@
+ [1] "make"              "fuel.type"        
+ [3] "aspiration"        "num.of.doors"     
+ [5] "body.style"        "drive.wheels"     
+ [7] "wheel.base"        "length"           
+ [9] "width"             "height"           
+[11] "curb.weight"       "num.of.cylinders" 
+[13] "engine.size"       "bore"             
+[15] "stroke"            "compression.ratio"
+[17] "horsepower"        "peak.rpm"         
+[19] "city.mpg"          "highway.mpg"      
+[21] "log_price"        
+[1] 195  21
+ [1] "make.alfa.romero"             
+ [2] "make.audi"                    
+ [3] "make.bmw"                     
+ [4] "make.chevrolet"               
+ [5] "make.dodge"                   
+ [6] "make.honda"                   
+ [7] "make.isuzu"                   
+ [8] "make.jaguar"                  
+ [9] "make.mazda"                   
+[10] "make.mercedes.benz"           
+[11] "make.mercury"                 
+[12] "make.mitsubishi"              
+[13] "make.nissan"                  
+[14] "make.peugot"                  
+[15] "make.plymouth"                
+[16] "make.porsche"                 
+[17] "make.saab"                    
+[18] "make.subaru"                  
+[19] "make.toyota"                  
+[20] "make.volkswagen"              
+[21] "make.volvo"                   
+[22] "fuel.type.diesel"             
+[23] "fuel.type.gas"                
+[24] "aspiration.std"               
+[25] "aspiration.turbo"             
+[26] "num.of.doors.."               
+[27] "num.of.doors.four"            
+[28] "num.of.doors.two"             
+[29] "body.style.hardtop_convert"   
+[30] "body.style.hatchback"         
+[31] "body.style.sedan"             
+[32] "body.style.wagon"             
+[33] "drive.wheels.4wd"             
+[34] "drive.wheels.fwd"             
+[35] "drive.wheels.rwd"             
+[36] "wheel.base"                   
+[37] "length"                       
+[38] "width"                        
+[39] "height"                       
+[40] "curb.weight"                  
+[41] "num.of.cylinders.eight_twelve"
+[42] "num.of.cylinders.five_six"    
+[43] "num.of.cylinders.three_four"  
+[44] "engine.size"                  
+[45] "bore"                         
+[46] "stroke"                       
+[47] "compression.ratio"            
+[48] "horsepower"                   
+[49] "peak.rpm"                     
+[50] "city.mpg"                     
+[51] "log_price"                    
+                              freqRatio percentUnique
+make.alfa.romero               64.00000      1.025641
+make.audi                      31.50000      1.025641
+make.bmw                       23.37500      1.025641
+make.chevrolet                 64.00000      1.025641
+make.dodge                     20.66667      1.025641
+make.isuzu                     96.50000      1.025641
+make.jaguar                    64.00000      1.025641
+make.mercedes.benz             23.37500      1.025641
+make.mercury                  194.00000      1.025641
+make.plymouth                  26.85714      1.025641
+make.porsche                   47.75000      1.025641
+make.saab                      31.50000      1.025641
+num.of.doors..                 96.50000      1.025641
+drive.wheels.4wd               23.37500      1.025641
+num.of.cylinders.eight_twelve  38.00000      1.025641
+                              zeroVar  nzv
+make.alfa.romero                FALSE TRUE
+make.audi                       FALSE TRUE
+make.bmw                        FALSE TRUE
+make.chevrolet                  FALSE TRUE
+make.dodge                      FALSE TRUE
+make.isuzu                      FALSE TRUE
+make.jaguar                     FALSE TRUE
+make.mercedes.benz              FALSE TRUE
+make.mercury                    FALSE TRUE
+make.plymouth                   FALSE TRUE
+make.porsche                    FALSE TRUE
+make.saab                       FALSE TRUE
+num.of.doors..                  FALSE TRUE
+drive.wheels.4wd                FALSE TRUE
+num.of.cylinders.eight_twelve   FALSE TRUE
+ [1] "fuel.type.diesel"           
+ [2] "fuel.type.gas"              
+ [3] "aspiration.std"             
+ [4] "aspiration.turbo"           
+ [5] "body.style.hardtop_convert" 
+ [6] "body.style.hatchback"       
+ [7] "body.style.sedan"           
+ [8] "body.style.wagon"           
+ [9] "drive.wheels.fwd"           
+[10] "drive.wheels.rwd"           
+[11] "wheel.base"                 
+[12] "length"                     
+[13] "width"                      
+[14] "height"                     
+[15] "curb.weight"                
+[16] "num.of.cylinders.five_six"  
+[17] "num.of.cylinders.three_four"
+[18] "engine.size"                
+[19] "bore"                       
+[20] "stroke"                     
+[21] "compression.ratio"          
+[22] "horsepower"                 
+[23] "peak.rpm"                   
+[24] "city.mpg"                   
+[25] "log_price"                  
+
+Processing end date and time
+Sat Jun 29 16:14:19 2019
+
+[1] "Total processing time = 26.34 seconds"
