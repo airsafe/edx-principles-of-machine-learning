@@ -1,0 +1,223 @@
+# Processing start time
+sink('intro_to_machine_learning_output.txt')
+timeStart = Sys.time()
+
+# ADMINISTRATIVE NOTES
+# Note: To describe database at any point, use str(*name*)
+# Note: To clear R workspace, use rm(list = ls())
+# Note: Searching R help files - RSiteSearch("character string")
+# Note: To clear console, use CTRL + L 
+
+
+# INSTALLING SPECIAL PACKAGES
+# if("<package_name>" %in% rownames(installed.packages()) == FALSE) 
+# {install.packages("<package_name>")}# Added due to error
+# library(<package_name>)
+# ====================
+
+# Introduction to Machine Learning
+# This lab introduces some basic concepts of machine learning with R. In this lab you will use the K-Nearest Neighbor (KNN) algorithm to classify the species of iris flowers, given measurements of flower characteristics. By completing this lab you will have an overview of an end-to-end machine learning modeling process.
+# 
+# By the completion of this lab, you will:
+#         
+#         Follow and understand a complete end-to-end machine learning process including data exploration, data preparation, modeling, and model evaluation.
+# Develop a basic understanding of the principles of machine learning and associated terminology.
+# Understand the basic process for evaluating machine learning models.
+# 
+# Overview of KNN classification
+# Before discussing a specific algorithm, it helps to know a bit of machine learning terminology. 
+# In supervised machine learning a set of cases are used to train, test and evaluate the model. Each case is comprised of the values of one or more features and a label value. 
+# The features are variables used by the model to *predict the value of the label. Minimizing the errors between the true value of the label and the prediction supervises the training of this model. 
+# Once the model is trained and tested, it can be evaluated based on the accuracy in predicting the label of a new set of cases.
+# 
+# In this lab you will use randomly selected cases to first train and then evaluate a k-nearest-neighbor (KNN) machine learning model. 
+# The goal is to predict the type or class of the label, which makes the machine learning model a classification model.
+# 
+# The k-nearest-neighbor algorithm is conceptually simple. 
+# In fact, there is no formal training step. 
+# Given a known set of cases, a new case is classified by majority vote of the K (where 𝑘=1,2,3, etc.) points nearest to the values of the new case; that is, the nearest neighbors of the new case.
+# 
+# The schematic figure below illustrates the basic concepts of a KNN classifier. 
+# In this case there are two features, the values of one shown on the horizontal axis and the values of the other shown on the vertical axis. 
+# The cases are shown on the diagram as one of two classes, red triangles and blue circles. 
+# To summarize, each case has a value for the two features, and a class. 
+# The goal of thee KNN algorithm is to classify cases with unknown labels.
+# 
+# Continuing with the example, on the left side of the diagram the 𝐾=1 case is illustrated. 
+# The nearest neighbor is a red triangle. Therefore, this KNN algorithm will classify the unknown case, '?', as a red triangle. 
+# On the right side of the diagram, the 𝐾=3 case is illustrated. 
+# There are three near neighbors within the circle. The majority of nearest neighbors for 𝐾=3 are the blue circles, so the algorithm classifies the unknown case, '?', as a blue circle. 
+# Notice that class predicted for the unknown case changes as K changes. 
+# This behavior is inherent in the KNN method.
+# 
+# 
+# <Graphic shows two graphs with multiple plotted points, one with a circle around one point,
+# and a second with a circle around three points>
+#         
+#         **KNN for k = 1 and k = 3**
+# There are some additional considerations in creating a robust KNN algorithm. 
+# These will be addressed later in this course.
+# 
+# Examine the data set
+# In this lab you will work with the Iris data set. 
+# This data set is famous in the history of statistics. 
+# The first publication using these data in statistics by the pioneering statistician Ronald A Fisher was in his 1936. 
+# Fisher proposed an algorithm to classify the species of iris flowers from physical measurements of their characteristics. 
+# The data set has been used as a teaching example ever since.
+# 
+# Now, you will load and examine these data. 
+# Execute the code in the cell below and examine the first few rows of the data frame.
+
+data(iris) # Load the iris data set
+head(iris) # look at the first few rows of the data frame
+
+# There are four features, containing the dimensions of parts of the iris flower structures. 
+# The label column is the Species of the flower. 
+# The goal is to create and test a KNN algorithm to correctly classify the species.
+# 
+# Next, you will execute the code in the cell below to show the data types of each column.
+
+str(iris)
+
+# The features are all numeric, and the label is of categorical or Factor type.
+# 
+# Next, you will determine the number of unique categories, and number of cases for each category, for the label variable, Species. 
+# Execute the code in the cell below and examine the results.
+
+table(iris$Species)
+
+# You can see there are three species of iris, each with 50 cases.
+# 
+# Next, you will create some plots to see how the classes might, or might not, be well separated by the value of the features. 
+# In an idea case, the label classes will be perfectly separated by one or more of the feature pairs. 
+# In the real-world this ideal situation will rarely, if ever, be the case.
+# 
+# There are six possible pair-wise scatter plots of these four features. 
+# For now, we will just create scatter plots of two variable pairs. 
+# Execute the code in the cell below and examine the resulting plots.
+# 
+# Note: Data visualization and the ggplot2 package are covered in another lesson.
+
+if("ggplot2" %in% rownames(installed.packages()) == FALSE) 
+{install.packages("ggplot2")}
+library(ggplot2)
+
+if("repr" %in% rownames(installed.packages()) == FALSE) 
+{install.packages("repr")}
+library(repr)
+
+options(repr.plot.width=5, repr.plot.height=4) # Set the initial plot area dimensions
+
+ggplot(iris, aes(Sepal.Width, Sepal.Length)) + geom_point(aes(color = Species))
+ggplot(iris, aes(Petal.Width, Sepal.Length)) + geom_point(aes(color = Species))    
+
+# Examine these results noticing the separation, or overlap, of the label values.
+# 
+# Then, answer Question 1 on the course page.
+# 
+# Prepare the data set
+# Data preparation is an important step before training any machine learning model. 
+# These data require only two preparation steps:
+#         
+#       * Scale the numeric values of the features. 
+#         It is important that numeric features used to train machine learning models have a similar range of values. 
+#         Otherwise, features which happen to have large numeric values may dominate model training, even if other features with smaller numeric values are more informative. 
+#         In this case Zscore normalization is used. 
+#         This normalization process scales each feature so that the mean is 0 and the variance is 1.0.
+# 
+#       * Split the dataset into randomly sampled training and evaluation data sets. 
+#         The random selection of cases seeks to limit the leakage of information between the training and evaluation cases.
+# 
+# The code in the cell below iterates over the numeric feature columns of the data frame. A statistical summary of the data frame is then printed. 
+# Execute this code and examine the results.
+
+iris[,c('Sepal.Width', 'Sepal.Length', 'Petal.Width', 'Petal.Length')] = 
+        lapply(iris[,c('Sepal.Width', 'Sepal.Length', 'Petal.Width', 'Petal.Length')], scale)
+print(summary(iris))
+print(sapply(iris[,c('Sepal.Width', 'Sepal.Length', 'Petal.Width', 'Petal.Length')], sd))
+
+#
+# Examine these results. The mean is zero and the variance approximately 1.0.
+# 
+# Now, you will split the dataset into a test and evaluation sub-sets. 
+# The code in the cell below randomly samples the cases and places them in either the training or test data frame. Execute this code to create these subsets.
+# 
+# Note: The use of the dplyr package and other packages in the Tidyverse for data preparation is covered in other labs and courses.
+
+## Split the data into a training and test set by Bernoulli sampling
+library(dplyr)
+#
+# Ensuring proper test set
+orig.row.ID = as.numeric(rownames(iris))
+iris.plus = cbind(orig.row.ID,iris)                         
+set.seed(2345)
+
+train.iris.plus = sample_frac(iris.plus, 0.7)
+test.iris.plus = iris.plus[-train.iris.plus$orig.row.ID,]
+# Take out the extra index column
+train.iris=train.iris.plus[,-which(names(train.iris.plus) == "orig.row.ID")]
+test.iris=test.iris.plus[,-which(names(test.iris.plus) == "orig.row.ID")]
+
+# Train and evaluate the KNN model
+# With some understanding of the relationships between the features and the label and preparation of the data completed you will now train and evaluate a  𝐾=3  model. 
+# The code in the cell below does the following:
+#         
+#         * Defines the model in the R modeling language as  𝑆𝑝𝑒𝑐𝑖𝑒𝑠∼ . . In English this formula means model the label Species by all of the other columns (features) in the data frame, indicated by  '.' .
+# * Sets the training data set to the subset created above.
+#       * Sets the test data set to the subset created above. 
+#         The performance of the model is evaluated on thee prediction accuracy on the labels of this subset.
+#       * The the value of K at 3.
+#       * Prints the summary of the model.
+
+# Execute this code and examine the summary of these results.
+# 
+# Note: Additional information on defining models with the R modeling language is in another lesson.
+
+# train.iris = sample_frac(iris, 0.7)
+# test.iris = iris[-as.numeric(rownames(train.iris)),] # use as.numeric because rownames() returns character
+#
+## Compute a k = 3 nearest neighbor model
+library(kknn)
+knn.3 <- kknn(Species ~ ., train = train.iris, test = test.iris, k=3)
+summary(knn.3)
+
+# Examine the summary of the model and notice the following:
+#         
+#         * A summary of the model is displayed.
+#         * The classification results for the test data are displayed. 
+#           You can see the most probable class along with the probabilities of the prediction for each class. The most probable class is the prediction.
+# 
+# Next, execute the code in the cell below to compute the accuracy of the model. 
+# Accuracy is the percentage of the test cases correctly classified. Execute this code, examine the results, and answer Question 2 on the course page.
+
+test.iris$predicted = predict(knn.3)
+test.iris$correct = test.iris$Species == test.iris$predicted
+round(100 * sum(test.iris$correct) / nrow(test.iris))
+
+# Now, execute the code in the cell below and examine plots of the classifications of the iris species.
+
+ggplot(test.iris, aes(Sepal.Width, Sepal.Length)) + geom_point(aes(color = predicted, shape = correct))
+ggplot(test.iris, aes(Petal.Width, Sepal.Length)) + geom_point(aes(color = predicted, shape = correct))       
+
+
+# Summary
+# In this lab you have created and evaluated a KNN machine learning classification model. Specifically you have:
+#         
+#       1. Loaded and explored the data using visualization to determine if the features separate the classes.
+#       2. Prepared the data by normalizing the numeric features and randomly sampling into training and testing subsets.
+#       3. Constructing and evaluating the machine learning model. Evaluation was performed by statistically, with the accuracy metric, and with visualization.
+
+# ====================
+# Processing end time
+timeEnd = Sys.time()
+
+# Processing date and total processing time
+cat(paste("","Processing end date and time",date(),"","",sep="\n"))
+paste("Total processing time =",round(difftime(timeEnd,timeStart), digits=2),"seconds",sep=" ")
+
+
+# Stop writing to an output file
+sink()
+
+################
+# Constructing and evaluating the machine learning model. Evaluation was performed by statistically, with the accuracy metric, and with visualization
