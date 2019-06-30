@@ -770,3 +770,18 @@ plot_scatter_grid(auto_prices, numcols, alpha = 0.2)
 #         4. Used density plots and hex bin plots to overcome over-plotting.
 #         5. Applied aesthetics to project additional dimensions of categorical and numeric variables onto a 2d plot surface.
 #         6. Used pair-wise scatter plots and conditioned plots to create displays with multiple axes.
+
+
+# ====================
+# Processing end time
+timeEnd = Sys.time()
+
+# Processing date and total processing time
+cat(paste("","Processing end date and time",date(),"","",sep="\n"))
+paste("Total processing time =",round(difftime(timeEnd,timeStart), digits=2),"seconds",sep=" ")
+
+
+# Stop writing to an output file
+sink()
+
+################
