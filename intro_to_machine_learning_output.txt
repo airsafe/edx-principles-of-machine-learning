@@ -1,0 +1,96 @@
+  Sepal.Length Sepal.Width Petal.Length Petal.Width
+1          5.1         3.5          1.4         0.2
+2          4.9         3.0          1.4         0.2
+3          4.7         3.2          1.3         0.2
+4          4.6         3.1          1.5         0.2
+5          5.0         3.6          1.4         0.2
+6          5.4         3.9          1.7         0.4
+  Species
+1  setosa
+2  setosa
+3  setosa
+4  setosa
+5  setosa
+6  setosa
+'data.frame':	150 obs. of  5 variables:
+ $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
+ $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
+ $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
+ $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
+ $ Species     : Factor w/ 3 levels "setosa","versicolor",..: 1 1 1 1 1 1 1 1 1 1 ...
+
+    setosa versicolor  virginica 
+        50         50         50 
+   Sepal.Length.V1       Sepal.Width.V1   
+ Min.   :-1.8637803   Min.   :-2.4258204  
+ 1st Qu.:-0.8976739   1st Qu.:-0.5903951  
+ Median :-0.0523308   Median :-0.1315388  
+ Mean   : 0.0000000   Mean   : 0.0000000  
+ 3rd Qu.: 0.6722490   3rd Qu.: 0.5567457  
+ Max.   : 2.4836986   Max.   : 3.0804554  
+   Petal.Length.V1       Petal.Width.V1          Species  
+ Min.   :-1.5623422   Min.   :-1.4422448   setosa    :50  
+ 1st Qu.:-1.2224563   1st Qu.:-1.1798595   versicolor:50  
+ Median : 0.3353541   Median : 0.1320673   virginica :50  
+ Mean   : 0.0000000   Mean   : 0.0000000                  
+ 3rd Qu.: 0.7602115   3rd Qu.: 0.7880307                  
+ Max.   : 1.7798692   Max.   : 1.7063794                  
+ Sepal.Width Sepal.Length  Petal.Width Petal.Length 
+           1            1            1            1 
+
+Call:
+kknn(formula = Species ~ ., train = train.iris, test = test.iris,     k = 3)
+
+Response: "nominal"
+          fit prob.setosa prob.versicolor prob.virginica
+1      setosa           1       0.0000000     0.00000000
+2      setosa           1       0.0000000     0.00000000
+3      setosa           1       0.0000000     0.00000000
+4      setosa           1       0.0000000     0.00000000
+5      setosa           1       0.0000000     0.00000000
+6      setosa           1       0.0000000     0.00000000
+7      setosa           1       0.0000000     0.00000000
+8      setosa           1       0.0000000     0.00000000
+9      setosa           1       0.0000000     0.00000000
+10     setosa           1       0.0000000     0.00000000
+11     setosa           1       0.0000000     0.00000000
+12     setosa           1       0.0000000     0.00000000
+13     setosa           1       0.0000000     0.00000000
+14     setosa           1       0.0000000     0.00000000
+15     setosa           1       0.0000000     0.00000000
+16 versicolor           0       1.0000000     0.00000000
+17 versicolor           0       0.9113379     0.08866211
+18 versicolor           0       1.0000000     0.00000000
+19 versicolor           0       1.0000000     0.00000000
+20 versicolor           0       1.0000000     0.00000000
+21  virginica           0       0.3849002     0.61509982
+22 versicolor           0       1.0000000     0.00000000
+23 versicolor           0       1.0000000     0.00000000
+24 versicolor           0       1.0000000     0.00000000
+25 versicolor           0       1.0000000     0.00000000
+26 versicolor           0       0.6150998     0.38490018
+27 versicolor           0       1.0000000     0.00000000
+28  virginica           0       0.0000000     1.00000000
+29 versicolor           0       1.0000000     0.00000000
+30 versicolor           0       1.0000000     0.00000000
+31 versicolor           0       1.0000000     0.00000000
+32 versicolor           0       1.0000000     0.00000000
+33 versicolor           0       1.0000000     0.00000000
+34 versicolor           0       1.0000000     0.00000000
+35 versicolor           0       1.0000000     0.00000000
+36  virginica           0       0.0000000     1.00000000
+37  virginica           0       0.0000000     1.00000000
+38  virginica           0       0.0000000     1.00000000
+39  virginica           0       0.0000000     1.00000000
+40  virginica           0       0.0000000     1.00000000
+41  virginica           0       0.0000000     1.00000000
+42  virginica           0       0.0000000     1.00000000
+43  virginica           0       0.0000000     1.00000000
+44  virginica           0       0.0000000     1.00000000
+45  virginica           0       0.2962381     0.70376193
+[1] 96
+
+Processing end date and time
+Sat Jun 29 19:09:28 2019
+
+[1] "Total processing time = 3.77 seconds"
