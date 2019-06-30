@@ -1,0 +1,19 @@
+[1] 50  2
+[1] 51  2
+              Estimate Std. Error   t value
+(Intercept) -1.4866745 0.09087328 -16.35986
+x            0.3064045 0.01586968  19.30754
+                Pr(>|t|)
+(Intercept) 2.899632e-21
+x           2.862109e-24
+Mean Square Error      =  0.0662 
+Root Mean Square Error =  0.2573 
+Mean Absolute Error    =  0.2029 
+Median Absolute Error  =  0.1692 
+R^2                    =  0.8859 
+Adjusted R^2           =  0.8835 
+
+Processing end date and time
+Sun Jun 30 11:23:36 2019
+
+[1] "Total processing time = 4.18 seconds"

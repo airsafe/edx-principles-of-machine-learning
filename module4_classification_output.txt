@@ -1,0 +1,335 @@
+[1] 1000   22
+  Customer_ID checking_account_status
+1     1122334                  < 0 DM
+2     6156361              0 - 200 DM
+3     2051359                    none
+4     8740590                  < 0 DM
+5     3924540                  < 0 DM
+6     3115687                    none
+  loan_duration_mo
+1                6
+2               48
+3               12
+4               42
+5               24
+6               36
+                           credit_history
+1 critical account - other non-bank loans
+2                      current loans paid
+3 critical account - other non-bank loans
+4                      current loans paid
+5                     past payment delays
+6                      current loans paid
+              purpose loan_amount
+1    radio/television        1169
+2    radio/television        5951
+3           education        2096
+4 furniture/equipment        7882
+5           car (new)        4870
+6           education        9055
+  savings_account_balance time_employed_yrs
+1            unknown/none        >= 7 years
+2                < 100 DM       1 - 4 years
+3                < 100 DM       4 - 7 years
+4                < 100 DM       4 - 7 years
+5                < 100 DM       1 - 4 years
+6            unknown/none       1 - 4 years
+  payment_pcnt_income
+1                   4
+2                   2
+3                   2
+4                   2
+5                   3
+6                   2
+                      gender_status
+1                       male-single
+2 female-divorced/separated/married
+3                       male-single
+4                       male-single
+5                       male-single
+6                       male-single
+  other_signators time_in_residence
+1            none                 4
+2            none                 2
+3            none                 3
+4       guarantor                 4
+5            none                 4
+6            none                 4
+                                 property
+1                             real estate
+2                             real estate
+3                             real estate
+4 building society savings/life insurance
+5                            unknown-none
+6                            unknown-none
+  age_yrs other_credit_outstanding
+1      67                     none
+2      22                     none
+3      49                     none
+4      45                     none
+5      53                     none
+6      35                     none
+  home_ownership number_loans
+1            own            2
+2            own            1
+3            own            1
+4       for free            1
+5       for free            2
+6       for free            1
+        job_category dependents telephone
+1            skilled          1       yes
+2            skilled          1      none
+3 unskilled-resident          2      none
+4            skilled          2      none
+5            skilled          2      none
+6 unskilled-resident          2       yes
+  foreign_worker bad_credit
+1            yes          0
+2            yes          1
+3            yes          0
+4            yes          0
+5            yes          1
+6            yes          0
+
+  0   1 
+700 300 
+[1] good bad  good good bad 
+Levels: bad good
+[1] 700  22
+[1] 300  22
+  loan_duration_mo loan_amount
+1       -1.2111310  -0.7137211
+3       -0.7100721  -0.3883552
+4        1.7952226   1.6424615
+5        0.2920458   0.5852856
+7        0.2920458  -0.1289751
+8        1.2941637   1.3146387
+  payment_pcnt_income    age_yrs
+1          0.91818241  2.6286850
+3         -0.88723244  1.0922267
+4         -0.88723244  0.7507916
+5          0.01547498  1.4336619
+7          0.01547498  1.4336619
+8         -0.88723244 -0.1027964
+                                          (Intercept) 
+                                          -0.75390333 
+                                     loan_duration_mo 
+                                          -0.35411346 
+                                          loan_amount 
+                                          -0.15046589 
+                                  payment_pcnt_income 
+                                          -0.30474847 
+                                              age_yrs 
+                                           0.22021622 
+ checking_account_status> 200 DM or salary assignment 
+                                           1.17710561 
+                    checking_account_status0 - 200 DM 
+                                           0.52879257 
+                          checking_account_statusnone 
+                                           1.85130662 
+credit_historycritical account - other non-bank loans 
+                                           1.43374851 
+                     credit_historycurrent loans paid 
+                                           0.97990665 
+                       credit_historyno credit - paid 
+                                          -0.13012144 
+                    credit_historypast payment delays 
+                                           0.82827210 
+                                     purposecar (new) 
+                                          -0.78850478 
+                                    purposecar (used) 
+                                           0.61501255 
+                           purposedomestic appliances 
+                                          -0.51539198 
+                                     purposeeducation 
+                                          -0.69523420 
+                           purposefurniture/equipment 
+                                          -0.15888329 
+                                         purposeother 
+                                           0.42870881 
+                              purposeradio/television 
+                                           0.13080063 
+                                       purposerepairs 
+                                          -0.71067719 
+                                    purposeretraining 
+                                           1.18608234 
+                 gender_statusmale-divorced/separated 
+                                          -0.15388454 
+                    gender_statusmale-married/widowed 
+                                           0.09341969 
+                             gender_statusmale-single 
+                                           0.48799863 
+                                    time_in_residence 
+                                          -0.04127121 
+                                 propertycar or other 
+                                          -0.06082133 
+                                  propertyreal estate 
+                                           0.28711696 
+                                 propertyunknown-none 
+                                          -0.46401973 
+   bad_credit     probs
+2         bad 0.5337613
+6        good 0.6729046
+17       good 0.9506619
+21       good 0.9123956
+24       good 0.9317374
+27       good 0.7881552
+28       good 0.7721530
+30        bad 0.2833987
+32       good 0.5896523
+33       good 0.5982149
+35       good 0.7695260
+36        bad 0.6102881
+38        bad 0.8903052
+43       good 0.6973973
+44       good 0.7388454
+46       good 0.8307381
+50       good 0.9080243
+51       good 0.5931489
+53       good 0.9365139
+54       good 0.9669572
+   bad_credit     probs score
+2         bad 0.5337613  good
+6        good 0.6729046  good
+17       good 0.9506619  good
+21       good 0.9123956  good
+24       good 0.9317374  good
+27       good 0.7881552  good
+28       good 0.7721530  good
+30        bad 0.2833987   bad
+32       good 0.5896523  good
+33       good 0.5982149  good
+35       good 0.7695260  good
+36        bad 0.6102881  good
+38        bad 0.8903052  good
+43       good 0.6973973  good
+44       good 0.7388454  good
+46       good 0.8307381  good
+50       good 0.9080243  good
+51       good 0.5931489  good
+53       good 0.9365139  good
+54       good 0.9669572  good
+                Negative Positive
+Actual Negative      191       19
+Actual Positive       51       39
+
+accuracy  = 0.767 
+precision = 0.672 
+recall    = 0.433 
+F1        = 0.527 
+AUC       = 0.801 
+Confusion Matrix and Statistics
+
+          Reference
+Prediction bad good
+      bad   39   19
+      good  51  191
+                                          
+               Accuracy : 0.7667          
+                 95% CI : (0.7146, 0.8134)
+    No Information Rate : 0.7             
+    P-Value [Acc > NIR] : 0.0061107       
+                                          
+                  Kappa : 0.3816          
+                                          
+ Mcnemar's Test P-Value : 0.0002112       
+                                          
+            Sensitivity : 0.4333          
+            Specificity : 0.9095          
+         Pos Pred Value : 0.6724          
+         Neg Pred Value : 0.7893          
+             Prevalence : 0.3000          
+         Detection Rate : 0.1300          
+   Detection Prevalence : 0.1933          
+      Balanced Accuracy : 0.6714          
+                                          
+       'Positive' Class : bad             
+                                          
+                Negative Positive
+Actual Negative        0      300
+Actual Positive        0        0
+
+accuracy  = 0 
+precision = 0 
+recall    = NaN 
+F1        = NaN 
+AUC       = 0.5 
+   bad_credit     probs
+2         bad 0.3731437
+6        good 0.4849324
+17       good 0.9131080
+21       good 0.8492696
+24       good 0.8828502
+27       good 0.6854614
+28       good 0.6201342
+30        bad 0.1640578
+32       good 0.4095292
+33       good 0.4228194
+35       good 0.6087154
+36        bad 0.4439027
+38        bad 0.8050861
+43       good 0.5232461
+44       good 0.6165267
+46       good 0.7312554
+50       good 0.8407349
+51       good 0.4014700
+53       good 0.8844510
+54       good 0.9378931
+                Negative Positive
+Actual Negative      168       42
+Actual Positive       27       63
+
+accuracy  = 0.77 
+precision = 0.6 
+recall    = 0.7 
+F1        = 0.646 
+AUC       = 0.803 
+
+For threshold =  0.5 
+                Negative Positive
+Actual Negative      168       42
+Actual Positive       27       63
+
+accuracy  = 0.77 
+precision = 0.6 
+recall    = 0.7 
+F1        = 0.646 
+AUC       = 0.803 
+
+For threshold =  0.55 
+                Negative Positive
+Actual Negative      161       49
+Actual Positive       25       65
+
+accuracy  = 0.753 
+precision = 0.57 
+recall    = 0.722 
+F1        = 0.637 
+AUC       = 0.803 
+
+For threshold =  0.6 
+                Negative Positive
+Actual Negative      149       61
+Actual Positive       20       70
+
+accuracy  = 0.73 
+precision = 0.534 
+recall    = 0.778 
+F1        = 0.633 
+AUC       = 0.803 
+
+For threshold =  0.65 
+                Negative Positive
+Actual Negative      131       79
+Actual Positive       19       71
+
+accuracy  = 0.673 
+precision = 0.473 
+recall    = 0.789 
+F1        = 0.592 
+AUC       = 0.803 
+
+Processing end date and time
+Sun Jun 30 11:20:17 2019
+
+[1] "Total processing time = 3.8 seconds"
