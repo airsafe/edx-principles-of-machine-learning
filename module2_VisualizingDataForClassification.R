@@ -8,6 +8,12 @@ timeStart = Sys.time()
 # Note: Searching R help files - RSiteSearch("character string")
 # Note: To clear console, use CTRL + L 
 
+# INSTALLING SPECIAL PACKAGES
+# if("<package_name>" %in% rownames(installed.packages()) == FALSE) 
+# {install.packages("<package_name>")}# Added due to error
+# library(<package_name>)
+# ====================
+
 # Visualizing Data for Classification
 # In a previous lab you explored the automotive price dataset to understand the relationships for a regression problem. 
 # In this lab you will explore the German bank credit dataset to understand the relationships for a classification problem. 
