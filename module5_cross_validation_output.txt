@@ -1,0 +1,150 @@
+[1] 1000   22
+ [1] "Customer_ID"             
+ [2] "checking_account_status" 
+ [3] "loan_duration_mo"        
+ [4] "credit_history"          
+ [5] "purpose"                 
+ [6] "loan_amount"             
+ [7] "savings_account_balance" 
+ [8] "time_employed_yrs"       
+ [9] "payment_pcnt_income"     
+[10] "gender_status"           
+[11] "other_signators"         
+[12] "time_in_residence"       
+[13] "property"                
+[14] "age_yrs"                 
+[15] "other_credit_outstanding"
+[16] "home_ownership"          
+[17] "number_loans"            
+[18] "job_category"            
+[19] "dependents"              
+[20] "telephone"               
+[21] "foreign_worker"          
+[22] "bad_credit"              
+ [1] good bad  good good bad  good good good good
+[10] bad 
+Levels: bad good
+  loan_duration_mo loan_amount payment_pcnt_income
+1       -1.2358595  -0.7447588          0.91801781
+2        2.2470700   0.9493418         -0.86974813
+3       -0.7382981  -0.4163541         -0.86974813
+4        1.7495086   1.6334296         -0.86974813
+5        0.2568246   0.5663801          0.02413484
+6        1.2519473   2.0489838         -0.86974813
+  time_in_residence     age_yrs number_loans
+1         1.0464631  2.76507291    1.0265652
+2        -0.7655942 -1.19080809   -0.7045734
+3         0.1404344  1.18272051   -0.7045734
+4         1.0464631  0.83108664   -0.7045734
+5         1.0464631  1.53435438    1.0265652
+6         1.0464631 -0.04799802   -0.7045734
+  dependents
+1 -0.4280754
+2 -0.4280754
+3  2.3337012
+4  2.3337012
+5  2.3337012
+6  2.3337012
+glmnet 
+
+1000 samples
+  10 predictor
+   2 classes: 'bad', 'good' 
+
+No pre-processing
+Resampling: Cross-Validated (10 fold) 
+Summary of sample sizes: 900, 900, 900, 900, 900, 900, ... 
+Resampling results across tuning parameters:
+
+  alpha  lambda        ROC        Sens     
+  0.10   0.0002955172  0.7759048  0.6333333
+  0.10   0.0029551720  0.7757619  0.6266667
+  0.10   0.0295517205  0.7770000  0.6400000
+  0.55   0.0002955172  0.7756667  0.6333333
+  0.55   0.0029551720  0.7761905  0.6233333
+  0.55   0.0295517205  0.7724762  0.6500000
+  1.00   0.0002955172  0.7757619  0.6333333
+  1.00   0.0029551720  0.7753810  0.6400000
+  1.00   0.0295517205  0.7592857  0.6733333
+  Spec     
+  0.7614286
+  0.7628571
+  0.7614286
+  0.7614286
+  0.7642857
+  0.7357143
+  0.7614286
+  0.7628571
+  0.7142857
+
+ROC was used to select the optimal model using
+ the largest value.
+The final values used for the model were alpha
+ = 0.1 and lambda = 0.02955172.
+glmnet 
+
+1000 samples
+  10 predictor
+   2 classes: 'bad', 'good' 
+
+No pre-processing
+Resampling: Cross-Validated (10 fold) 
+Summary of sample sizes: 900, 900, 900, 900, 900, 900, ... 
+Resampling results across tuning parameters:
+
+  alpha  lambda        AUC        Precision
+  0.10   0.0002955172  0.5773434  0.5331288
+  0.10   0.0029551720  0.5758529  0.5323636
+  0.10   0.0295517205  0.5654062  0.5355771
+  0.55   0.0002955172  0.5766628  0.5331288
+  0.55   0.0029551720  0.5754488  0.5330042
+  0.55   0.0295517205  0.5547080  0.5169157
+  1.00   0.0002955172  0.5767051  0.5331288
+  1.00   0.0029551720  0.5737468  0.5393625
+  1.00   0.0295517205  0.5276405  0.5059268
+  Recall     F        
+  0.6333333  0.5773607
+  0.6266667  0.5740510
+  0.6400000  0.5816481
+  0.6333333  0.5773607
+  0.6233333  0.5728910
+  0.6500000  0.5736465
+  0.6333333  0.5773607
+  0.6400000  0.5834460
+  0.6733333  0.5760049
+
+Recall was used to select the optimal model
+ using the largest value.
+The final values used for the model were alpha =
+ 1 and lambda = 0.02955172.
+     ROC  Sens  Spec alpha            lambda
+1  0.791 0.700 0.671   0.1 0.029551720478006
+2  0.716 0.700 0.786   0.1 0.029551720478006
+3  0.825 0.633 0.857   0.1 0.029551720478006
+4  0.722 0.533 0.671   0.1 0.029551720478006
+5  0.797 0.700 0.714   0.1 0.029551720478006
+6  0.774 0.633 0.786   0.1 0.029551720478006
+7  0.851 0.833 0.800   0.1 0.029551720478006
+8  0.809 0.633 0.786   0.1 0.029551720478006
+9  0.806 0.600 0.771   0.1 0.029551720478006
+10 0.638 0.500 0.686   0.1 0.029551720478006
+11 0.773 0.647 0.753   0.1 0.029551720478006
+12 0.063 0.095 0.063   0.1 0.029551720478006
+   Resample
+1    Fold01
+2    Fold02
+3    Fold03
+4    Fold04
+5    Fold05
+6    Fold06
+7    Fold07
+8    Fold08
+9    Fold09
+10   Fold10
+11     Mean
+12      STD
+
+Processing end date and time
+Sun Jun 30 11:42:09 2019
+
+[1] "Total processing time = 6.93 seconds"

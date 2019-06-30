@@ -1,0 +1,345 @@
+[1] 195  26
+ [1] "symboling"        
+ [2] "make"             
+ [3] "fuel.type"        
+ [4] "aspiration"       
+ [5] "num.of.doors"     
+ [6] "body.style"       
+ [7] "drive.wheels"     
+ [8] "engine.location"  
+ [9] "wheel.base"       
+[10] "length"           
+[11] "width"            
+[12] "height"           
+[13] "curb.weight"      
+[14] "engine.type"      
+[15] "num.of.cylinders" 
+[16] "engine.size"      
+[17] "fuel.system"      
+[18] "bore"             
+[19] "stroke"           
+[20] "compression.ratio"
+[21] "horsepower"       
+[22] "peak.rpm"         
+[23] "city.mpg"         
+[24] "highway.mpg"      
+[25] "price"            
+[26] "log_price"        
+[1] 147  26
+[1] 48 26
+   wheel.base     length
+1 -1.66334530 -0.4791643
+2 -1.66334530 -0.4791643
+6  0.07441198  0.1737428
+7  1.00535338  1.3566568
+8  1.00535338  1.3566568
+9  1.00535338  1.3566568
+       width     height
+1 -0.8655069 -2.1632960
+2 -0.8655069 -2.1632960
+6  0.1267119 -0.3189213
+7  2.4268556  0.7962820
+8  2.4268556  0.7962820
+9  2.4268556  0.8820669
+  curb.weight engine.type
+1 -0.07121387        dohc
+2 -0.07121387        dohc
+6 -0.14739526         ohc
+7  0.47877864         ohc
+8  0.68316774         ohc
+9  0.92843467         ohc
+  num.of.cylinders engine.size
+1       three_four -0.01271573
+2       three_four -0.01271573
+6         five_six  0.12405588
+7         five_six  0.12405588
+8         five_six  0.12405588
+9         five_six  0.01007954
+  fuel.system       bore
+1        mpfi  0.4347487
+2        mpfi  0.4347487
+6        mpfi -0.5901228
+7        mpfi -0.5901228
+8        mpfi -0.5901228
+9        mpfi -0.8097382
+      stroke compression.ratio
+1 -1.8385856        -0.2953773
+2 -1.8385856        -0.2953773
+6  0.4874471        -0.4195707
+7  0.4874471        -0.4195707
+8  0.4874471        -0.4195707
+9  0.4874471        -0.4692480
+  horsepower   peak.rpm
+1  0.1417937 -0.2071160
+2  0.1417937 -0.2071160
+6  0.1160607  0.8284638
+7  0.1160607  0.8284638
+8  0.1160607  0.8284638
+9  0.8880485  0.8284638
+    city.mpg
+1 -0.6352759
+2 -0.6352759
+6 -0.9389687
+7 -0.9389687
+8 -0.9389687
+9 -1.2426616
+Mean Square Error      =  0.0269 
+Root Mean Square Error =  0.164 
+Mean Absolute Error    =  0.1299 
+Median Absolute Error  =  0.1035 
+R^2                    =  0.9715 
+Adjusted R^2           =  0.9592 
+[1] 147  52
+  make.alfa-romero make.audi
+1                1         0
+2                1         0
+6                0         1
+7                0         1
+8                0         1
+9                0         1
+  make.bmw make.chevrolet
+1        0              0
+2        0              0
+6        0              0
+7        0              0
+8        0              0
+9        0              0
+  make.dodge make.honda
+1          0          0
+2          0          0
+6          0          0
+7          0          0
+8          0          0
+9          0          0
+  make.isuzu make.jaguar
+1          0           0
+2          0           0
+6          0           0
+7          0           0
+8          0           0
+9          0           0
+  make.mazda make.mercedes-benz
+1          0                  0
+2          0                  0
+6          0                  0
+7          0                  0
+8          0                  0
+9          0                  0
+  make.mercury make.mitsubishi
+1            0               0
+2            0               0
+6            0               0
+7            0               0
+8            0               0
+9            0               0
+  make.nissan make.peugot
+1           0           0
+2           0           0
+6           0           0
+7           0           0
+8           0           0
+9           0           0
+  make.plymouth make.porsche
+1             0            0
+2             0            0
+6             0            0
+7             0            0
+8             0            0
+9             0            0
+  make.saab make.subaru
+1         0           0
+2         0           0
+6         0           0
+7         0           0
+8         0           0
+9         0           0
+  make.toyota make.volkswagen
+1           0               0
+2           0               0
+6           0               0
+7           0               0
+8           0               0
+9           0               0
+  make.volvo fuel.type.diesel
+1          0                0
+2          0                0
+6          0                0
+7          0                0
+8          0                0
+9          0                0
+  fuel.type.gas aspiration.std
+1             1              1
+2             1              1
+6             1              1
+7             1              1
+8             1              1
+9             1              0
+  aspiration.turbo num.of.doors.?
+1                0              0
+2                0              0
+6                0              0
+7                0              0
+8                0              0
+9                1              0
+  num.of.doors.four
+1                 0
+2                 0
+6                 0
+7                 1
+8                 1
+9                 1
+  num.of.doors.two
+1                1
+2                1
+6                1
+7                0
+8                0
+9                0
+  body.style.hardtop_convert
+1                          1
+2                          1
+6                          0
+7                          0
+8                          0
+9                          0
+  body.style.hatchback
+1                    0
+2                    0
+6                    0
+7                    0
+8                    0
+9                    0
+  body.style.sedan
+1                0
+2                0
+6                1
+7                1
+8                0
+9                1
+  body.style.wagon
+1                0
+2                0
+6                0
+7                0
+8                1
+9                0
+  drive.wheels.4wd
+1                0
+2                0
+6                0
+7                0
+8                0
+9                0
+  drive.wheels.fwd
+1                0
+2                0
+6                1
+7                1
+8                1
+9                1
+  drive.wheels.rwd
+1                1
+2                1
+6                0
+7                0
+8                0
+9                0
+  engine.location.front
+1                     1
+2                     1
+6                     1
+7                     1
+8                     1
+9                     1
+  engine.location.rear
+1                    0
+2                    0
+6                    0
+7                    0
+8                    0
+9                    0
+   wheel.base     length
+1 -1.66334530 -0.4791643
+2 -1.66334530 -0.4791643
+6  0.07441198  0.1737428
+7  1.00535338  1.3566568
+8  1.00535338  1.3566568
+9  1.00535338  1.3566568
+       width     height
+1 -0.8655069 -2.1632960
+2 -0.8655069 -2.1632960
+6  0.1267119 -0.3189213
+7  2.4268556  0.7962820
+8  2.4268556  0.7962820
+9  2.4268556  0.8820669
+  curb.weight
+1 -0.07121387
+2 -0.07121387
+6 -0.14739526
+7  0.47877864
+8  0.68316774
+9  0.92843467
+  num.of.cylinders.eight_twelve
+1                             0
+2                             0
+6                             0
+7                             0
+8                             0
+9                             0
+  num.of.cylinders.five_six
+1                         0
+2                         0
+6                         1
+7                         1
+8                         1
+9                         1
+  num.of.cylinders.three_four
+1                           1
+2                           1
+6                           0
+7                           0
+8                           0
+9                           0
+  engine.size       bore
+1 -0.01271573  0.4347487
+2 -0.01271573  0.4347487
+6  0.12405588 -0.5901228
+7  0.12405588 -0.5901228
+8  0.12405588 -0.5901228
+9  0.01007954 -0.8097382
+      stroke compression.ratio
+1 -1.8385856        -0.2953773
+2 -1.8385856        -0.2953773
+6  0.4874471        -0.4195707
+7  0.4874471        -0.4195707
+8  0.4874471        -0.4195707
+9  0.4874471        -0.4692480
+  horsepower   peak.rpm
+1  0.1417937 -0.2071160
+2  0.1417937 -0.2071160
+6  0.1160607  0.8284638
+7  0.1160607  0.8284638
+8  0.1160607  0.8284638
+9  0.8880485  0.8284638
+    city.mpg
+1 -0.6352759
+2 -0.6352759
+6 -0.9389687
+7 -0.9389687
+8 -0.9389687
+9 -1.2426616
+Mean Square Error      =  0.0182 
+Root Mean Square Error =  0.1347 
+Mean Absolute Error    =  0.0986 
+Median Absolute Error  =  0.0634 
+R^2                    =  0.9176 
+Mean Square Error      =  0.0188 
+Root Mean Square Error =  0.137 
+Mean Absolute Error    =  0.1095 
+Median Absolute Error  =  0.0813 
+R^2                    =  0.9148 
+
+Processing end date and time
+Sun Jun 30 11:47:37 2019
+
+[1] "Total processing time = 5.61 seconds"

@@ -1,0 +1,442 @@
+[1] 100   2
+           x           y
+1 -1.0289674 -1.44872226
+2  0.5476797 -0.47912514
+3 -1.1761978 -0.18875203
+4  0.3192489  0.06053589
+5  1.3990650  1.15101479
+6  1.0575449  0.27422109
+Standard deviations (1, .., p=2):
+[1] 1.1197401 0.5688762
+
+Rotation (n x k) = (2 x 2):
+        PC1        PC2
+x 0.6595985 -0.7516182
+y 0.7516182  0.6595985
+[1] 0.7948445 0.2051555
+'data.frame':	2 obs. of  2 variables:
+ $ PC1: num  0.524 0.597
+ $ PC2: num  -0.154 0.135
+[1] 1000   21
+'data.frame':	1000 obs. of  21 variables:
+ $ checking_account_status : Factor w/ 4 levels "< 0 DM","> 200 DM or salary assignment",..: 1 3 4 1 1 4 4 3 4 3 ...
+ $ loan_duration_mo        : int  6 48 12 42 24 36 24 36 12 30 ...
+ $ credit_history          : Factor w/ 5 levels "all loans at bank paid",..: 2 3 2 3 5 3 3 3 3 2 ...
+ $ purpose                 : Factor w/ 10 levels "business","car (new)",..: 8 8 5 6 2 5 6 3 8 2 ...
+ $ loan_amount             : int  1169 5951 2096 7882 4870 9055 2835 6948 3059 5234 ...
+ $ savings_account_balance : Factor w/ 5 levels "< 100 DM",">= 1000 DM",..: 5 1 1 1 1 5 4 1 2 1 ...
+ $ time_employed_yrs       : Factor w/ 5 levels "< 1 year",">= 7 years",..: 2 3 4 4 3 3 2 3 4 5 ...
+ $ payment_pcnt_income     : int  4 2 2 2 3 2 3 2 2 4 ...
+ $ gender_status           : Factor w/ 4 levels "female-divorced/separated/married",..: 4 1 4 4 4 4 4 4 2 3 ...
+ $ other_signators         : Factor w/ 3 levels "co-applicant",..: 3 3 3 2 3 3 3 3 3 3 ...
+ $ time_in_residence       : int  4 2 3 4 4 4 4 2 4 2 ...
+ $ property                : Factor w/ 4 levels "building society savings/life insurance",..: 3 3 3 1 4 4 1 2 3 2 ...
+ $ age_yrs                 : int  67 22 49 45 53 35 53 35 61 28 ...
+ $ other_credit_outstanding: Factor w/ 3 levels "bank","none",..: 2 2 2 2 2 2 2 2 2 2 ...
+ $ home_ownership          : Factor w/ 3 levels "for free","own",..: 2 2 2 1 1 1 2 3 2 2 ...
+ $ number_loans            : int  2 1 1 1 2 1 1 1 1 2 ...
+ $ job_category            : Factor w/ 4 levels "highly skilled",..: 2 2 4 2 2 4 2 1 4 1 ...
+ $ dependents              : int  1 1 2 2 2 2 1 1 1 1 ...
+ $ telephone               : Factor w/ 2 levels "none","yes": 2 1 1 1 1 2 1 2 1 1 ...
+ $ foreign_worker          : Factor w/ 2 levels "no","yes": 2 2 2 2 2 2 2 2 2 2 ...
+ $ bad_credit              : Factor w/ 2 levels "bad","good": 2 1 2 2 1 2 2 2 2 1 ...
+[1] 700  61
+[1] 300  61
+  checking_account_status.< 0 DM
+1                              1
+3                              0
+4                              1
+5                              1
+7                              0
+8                              0
+  checking_account_status.> 200 DM or salary assignment
+1                                                     0
+3                                                     0
+4                                                     0
+5                                                     0
+7                                                     0
+8                                                     0
+  checking_account_status.0 - 200 DM
+1                                  0
+3                                  0
+4                                  0
+5                                  0
+7                                  0
+8                                  1
+  checking_account_status.none loan_duration_mo
+1                            0                6
+3                            1               12
+4                            0               42
+5                            0               24
+7                            1               24
+8                            0               36
+  credit_history.all loans at bank paid
+1                                     0
+3                                     0
+4                                     0
+5                                     0
+7                                     0
+8                                     0
+  credit_history.critical account - other non-bank loans
+1                                                      1
+3                                                      1
+4                                                      0
+5                                                      0
+7                                                      0
+8                                                      0
+  credit_history.current loans paid
+1                                 0
+3                                 0
+4                                 1
+5                                 0
+7                                 1
+8                                 1
+  credit_history.no credit - paid
+1                               0
+3                               0
+4                               0
+5                               0
+7                               0
+8                               0
+  credit_history.past payment delays
+1                                  0
+3                                  0
+4                                  0
+5                                  1
+7                                  0
+8                                  0
+  purpose.business purpose.car (new)
+1                0                 0
+3                0                 0
+4                0                 0
+5                0                 1
+7                0                 0
+8                0                 0
+  purpose.car (used) purpose.domestic appliances
+1                  0                           0
+3                  0                           0
+4                  0                           0
+5                  0                           0
+7                  0                           0
+8                  1                           0
+  purpose.education purpose.furniture/equipment
+1                 0                           0
+3                 1                           0
+4                 0                           1
+5                 0                           0
+7                 0                           1
+8                 0                           0
+  purpose.other purpose.radio/television
+1             0                        1
+3             0                        0
+4             0                        0
+5             0                        0
+7             0                        0
+8             0                        0
+  purpose.repairs purpose.retraining loan_amount
+1               0                  0        1169
+3               0                  0        2096
+4               0                  0        7882
+5               0                  0        4870
+7               0                  0        2835
+8               0                  0        6948
+  savings_account_balance.< 100 DM
+1                                0
+3                                1
+4                                1
+5                                1
+7                                0
+8                                1
+  savings_account_balance.>= 1000 DM
+1                                  0
+3                                  0
+4                                  0
+5                                  0
+7                                  0
+8                                  0
+  savings_account_balance.100 - 500 DM
+1                                    0
+3                                    0
+4                                    0
+5                                    0
+7                                    0
+8                                    0
+  savings_account_balance.500 - 1000 DM
+1                                     0
+3                                     0
+4                                     0
+5                                     0
+7                                     1
+8                                     0
+  savings_account_balance.unknown/none
+1                                    1
+3                                    0
+4                                    0
+5                                    0
+7                                    0
+8                                    0
+  time_employed_yrs.< 1 year
+1                          0
+3                          0
+4                          0
+5                          0
+7                          0
+8                          0
+  time_employed_yrs.>= 7 years
+1                            1
+3                            0
+4                            0
+5                            0
+7                            1
+8                            0
+  time_employed_yrs.1 - 4 years
+1                             0
+3                             0
+4                             0
+5                             1
+7                             0
+8                             1
+  time_employed_yrs.4 - 7 years
+1                             0
+3                             1
+4                             1
+5                             0
+7                             0
+8                             0
+  time_employed_yrs.unemployed payment_pcnt_income
+1                            0                   4
+3                            0                   2
+4                            0                   2
+5                            0                   3
+7                            0                   3
+8                            0                   2
+  gender_status.female-divorced/separated/married
+1                                               0
+3                                               0
+4                                               0
+5                                               0
+7                                               0
+8                                               0
+  gender_status.male-divorced/separated
+1                                     0
+3                                     0
+4                                     0
+5                                     0
+7                                     0
+8                                     0
+  gender_status.male-married/widowed
+1                                  0
+3                                  0
+4                                  0
+5                                  0
+7                                  0
+8                                  0
+  gender_status.male-single
+1                         1
+3                         1
+4                         1
+5                         1
+7                         1
+8                         1
+  other_signators.co-applicant
+1                            0
+3                            0
+4                            0
+5                            0
+7                            0
+8                            0
+  other_signators.guarantor other_signators.none
+1                         0                    1
+3                         0                    1
+4                         1                    0
+5                         0                    1
+7                         0                    1
+8                         0                    1
+  time_in_residence
+1                 4
+3                 3
+4                 4
+5                 4
+7                 4
+8                 2
+  property.building society savings/life insurance
+1                                                0
+3                                                0
+4                                                1
+5                                                0
+7                                                1
+8                                                0
+  property.car or other property.real estate
+1                     0                    1
+3                     0                    1
+4                     0                    0
+5                     0                    0
+7                     0                    0
+8                     1                    0
+  property.unknown-none age_yrs
+1                     0      67
+3                     0      49
+4                     0      45
+5                     1      53
+7                     0      53
+8                     0      35
+  other_credit_outstanding.bank
+1                             0
+3                             0
+4                             0
+5                             0
+7                             0
+8                             0
+  other_credit_outstanding.none
+1                             1
+3                             1
+4                             1
+5                             1
+7                             1
+8                             1
+  other_credit_outstanding.stores
+1                               0
+3                               0
+4                               0
+5                               0
+7                               0
+8                               0
+  home_ownership.for free home_ownership.own
+1                       0                  1
+3                       0                  1
+4                       1                  0
+5                       1                  0
+7                       0                  1
+8                       0                  0
+  home_ownership.rent number_loans
+1                   0            2
+3                   0            1
+4                   0            1
+5                   0            2
+7                   0            1
+8                   1            1
+  job_category.highly skilled job_category.skilled
+1                           0                    1
+3                           0                    0
+4                           0                    1
+5                           0                    1
+7                           0                    1
+8                           1                    0
+  job_category.unemployed-unskilled-non-resident
+1                                              0
+3                                              0
+4                                              0
+5                                              0
+7                                              0
+8                                              0
+  job_category.unskilled-resident dependents
+1                               0          1
+3                               1          2
+4                               0          2
+5                               0          2
+7                               0          1
+8                               0          1
+  telephone.none telephone.yes foreign_worker.no
+1              0             1                 0
+3              1             0                 0
+4              1             0                 0
+5              1             0                 0
+7              1             0                 0
+8              0             1                 0
+  foreign_worker.yes
+1                  1
+3                  1
+4                  1
+5                  1
+7                  1
+8                  1
+  loan_duration_mo loan_amount payment_pcnt_income
+1       -1.2111310  -0.7137211          0.91818241
+3       -0.7100721  -0.3883552         -0.88723244
+4        1.7952226   1.6424615         -0.88723244
+5        0.2920458   0.5852856          0.01547498
+7        0.2920458  -0.1289751          0.01547498
+8        1.2941637   1.3146387         -0.88723244
+     age_yrs
+1  2.6286850
+3  1.0922267
+4  0.7507916
+5  1.4336619
+7  1.4336619
+8 -0.1027964
+[1] 61 10
+                        checking_account_status.< 0 DM 
+                                          0.0041824262 
+ checking_account_status.> 200 DM or salary assignment 
+                                         -0.0170404247 
+                    checking_account_status.0 - 200 DM 
+                                          0.0130986240 
+                          checking_account_status.none 
+                                         -0.0002406256 
+                                      loan_duration_mo 
+                                          0.5912636284 
+                 credit_history.all loans at bank paid 
+                                          0.0047481403 
+credit_history.critical account - other non-bank loans 
+                                          0.0233886633 
+                     credit_history.current loans paid 
+                                         -0.0757636814 
+                       credit_history.no credit - paid 
+                                          0.0182902560 
+                    credit_history.past payment delays 
+                                          0.0293366218 
+[1] 700  10
+(Intercept)          X1          X2          X3 
+  0.2514703  -1.7915233  -2.3116365  -3.7885823 
+         X4          X5          X6          X7 
+  5.3426927 -10.0616997  21.9615822 -24.8616285 
+         X8          X9         X10 
+ -8.8677630   0.4296129  11.4018300 
+[1] 300  11
+   bad_credit     probs score
+2         bad 0.2104777   bad
+6        good 0.6320068  good
+17       good 0.9094808  good
+21       good 0.8629139  good
+24       good 0.8136241  good
+27       good 0.7728316  good
+28       good 0.6728528  good
+30        bad 0.2252231   bad
+32       good 0.4047803   bad
+33       good 0.7857070  good
+                Negative Positive
+Actual Negative      164       46
+Actual Positive       34       56
+
+accuracy  = 0.733 
+precision = 0.549 
+recall    = 0.622 
+F1        = 0.583 
+AUC       = 0.777 
+[1] 61 20
+(Intercept)          X1          X2          X3 
+  0.4534553  -1.9152123  -2.6651811  -4.1565846 
+         X4          X5          X6          X7 
+  5.9930671 -11.0421069  22.9253125 -27.1213236 
+         X8          X9         X10         X11 
+ -8.6798237   0.7979833  13.0026509 -26.4072373 
+        X12         X13         X14         X15 
+-19.3906247 -25.7109013  12.7121688   0.3790976 
+        X16         X17         X18         X19 
+ -1.4440384 -23.7518488   1.1498755  -2.7177756 
+        X20 
+ 28.5854077 
+                Negative Positive
+Actual Negative      162       48
+Actual Positive       27       63
+
+accuracy  = 0.75 
+precision = 0.568 
+recall    = 0.7 
+F1        = 0.627 
+AUC       = 0.8 
+
+Processing end date and time
+Sun Jun 30 11:38:45 2019
+
+[1] "Total processing time = 2.43 seconds"
