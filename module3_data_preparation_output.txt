@@ -1,0 +1,470 @@
+   symboling normalized.losses        make
+1          3                 ? alfa-romero
+2          3                 ? alfa-romero
+3          1                 ? alfa-romero
+4          2               164        audi
+5          2               164        audi
+6          2                 ?        audi
+7          1               158        audi
+8          1                 ?        audi
+9          1               158        audi
+10         0                 ?        audi
+11         2               192         bmw
+12         0               192         bmw
+13         0               188         bmw
+14         0               188         bmw
+15         1                 ?         bmw
+16         0                 ?         bmw
+17         0                 ?         bmw
+18         0                 ?         bmw
+19         2               121   chevrolet
+20         1                98   chevrolet
+   fuel.type aspiration num.of.doors
+1        gas        std          two
+2        gas        std          two
+3        gas        std          two
+4        gas        std         four
+5        gas        std         four
+6        gas        std          two
+7        gas        std         four
+8        gas        std         four
+9        gas      turbo         four
+10       gas      turbo          two
+11       gas        std          two
+12       gas        std         four
+13       gas        std          two
+14       gas        std         four
+15       gas        std         four
+16       gas        std         four
+17       gas        std          two
+18       gas        std         four
+19       gas        std          two
+20       gas        std          two
+    body.style drive.wheels engine.location
+1  convertible          rwd           front
+2  convertible          rwd           front
+3    hatchback          rwd           front
+4        sedan          fwd           front
+5        sedan          4wd           front
+6        sedan          fwd           front
+7        sedan          fwd           front
+8        wagon          fwd           front
+9        sedan          fwd           front
+10   hatchback          4wd           front
+11       sedan          rwd           front
+12       sedan          rwd           front
+13       sedan          rwd           front
+14       sedan          rwd           front
+15       sedan          rwd           front
+16       sedan          rwd           front
+17       sedan          rwd           front
+18       sedan          rwd           front
+19   hatchback          fwd           front
+20   hatchback          fwd           front
+   wheel.base length width height curb.weight
+1        88.6  168.8  64.1   48.8        2548
+2        88.6  168.8  64.1   48.8        2548
+3        94.5  171.2  65.5   52.4        2823
+4        99.8  176.6  66.2   54.3        2337
+5        99.4  176.6  66.4   54.3        2824
+6        99.8  177.3  66.3   53.1        2507
+7       105.8  192.7  71.4   55.7        2844
+8       105.8  192.7  71.4   55.7        2954
+9       105.8  192.7  71.4   55.9        3086
+10       99.5  178.2  67.9   52.0        3053
+11      101.2  176.8  64.8   54.3        2395
+12      101.2  176.8  64.8   54.3        2395
+13      101.2  176.8  64.8   54.3        2710
+14      101.2  176.8  64.8   54.3        2765
+15      103.5  189.0  66.9   55.7        3055
+16      103.5  189.0  66.9   55.7        3230
+17      103.5  193.8  67.9   53.7        3380
+18      110.0  197.0  70.9   56.3        3505
+19       88.4  141.1  60.3   53.2        1488
+20       94.5  155.9  63.6   52.0        1874
+   engine.type num.of.cylinders engine.size
+1         dohc             four         130
+2         dohc             four         130
+3         ohcv              six         152
+4          ohc             four         109
+5          ohc             five         136
+6          ohc             five         136
+7          ohc             five         136
+8          ohc             five         136
+9          ohc             five         131
+10         ohc             five         131
+11         ohc             four         108
+12         ohc             four         108
+13         ohc              six         164
+14         ohc              six         164
+15         ohc              six         164
+16         ohc              six         209
+17         ohc              six         209
+18         ohc              six         209
+19           l            three          61
+20         ohc             four          90
+   fuel.system bore stroke compression.ratio
+1         mpfi 3.47   2.68               9.0
+2         mpfi 3.47   2.68               9.0
+3         mpfi 2.68   3.47               9.0
+4         mpfi 3.19   3.40              10.0
+5         mpfi 3.19   3.40               8.0
+6         mpfi 3.19   3.40               8.5
+7         mpfi 3.19   3.40               8.5
+8         mpfi 3.19   3.40               8.5
+9         mpfi 3.13   3.40               8.3
+10        mpfi 3.13   3.40               7.0
+11        mpfi 3.50   2.80               8.8
+12        mpfi 3.50   2.80               8.8
+13        mpfi 3.31   3.19               9.0
+14        mpfi 3.31   3.19               9.0
+15        mpfi 3.31   3.19               9.0
+16        mpfi 3.62   3.39               8.0
+17        mpfi 3.62   3.39               8.0
+18        mpfi 3.62   3.39               8.0
+19        2bbl 2.91   3.03               9.5
+20        2bbl 3.03   3.11               9.6
+   horsepower peak.rpm city.mpg highway.mpg
+1         111     5000       21          27
+2         111     5000       21          27
+3         154     5000       19          26
+4         102     5500       24          30
+5         115     5500       18          22
+6         110     5500       19          25
+7         110     5500       19          25
+8         110     5500       19          25
+9         140     5500       17          20
+10        160     5500       16          22
+11        101     5800       23          29
+12        101     5800       23          29
+13        121     4250       21          28
+14        121     4250       21          28
+15        121     4250       20          25
+16        182     5400       16          22
+17        182     5400       16          22
+18        182     5400       15          20
+19         48     5100       47          53
+20         70     5400       38          43
+   price
+1  13495
+2  16500
+3  16500
+4  13950
+5  17450
+6  15250
+7  17710
+8  18920
+9  23875
+10     ?
+11 16430
+12 16925
+13 20970
+14 21105
+15 24565
+16 30760
+17 41315
+18 36880
+19  5151
+20  6295
+$symboling
+[1] FALSE
+
+$normalized.losses
+[1] TRUE
+
+$make
+[1] FALSE
+
+$fuel.type
+[1] FALSE
+
+$aspiration
+[1] FALSE
+
+$num.of.doors
+[1] TRUE
+
+$body.style
+[1] FALSE
+
+$drive.wheels
+[1] FALSE
+
+$engine.location
+[1] FALSE
+
+$wheel.base
+[1] FALSE
+
+$length
+[1] FALSE
+
+$width
+[1] FALSE
+
+$height
+[1] FALSE
+
+$curb.weight
+[1] FALSE
+
+$engine.type
+[1] FALSE
+
+$num.of.cylinders
+[1] FALSE
+
+$engine.size
+[1] FALSE
+
+$fuel.system
+[1] FALSE
+
+$bore
+[1] TRUE
+
+$stroke
+[1] TRUE
+
+$compression.ratio
+[1] FALSE
+
+$horsepower
+[1] TRUE
+
+$peak.rpm
+[1] TRUE
+
+$city.mpg
+[1] FALSE
+
+$highway.mpg
+[1] FALSE
+
+$price
+[1] TRUE
+
+'data.frame':	205 obs. of  26 variables:
+ $ symboling        : int  3 3 1 2 2 2 1 1 1 0 ...
+ $ normalized.losses: chr  "?" "?" "?" "164" ...
+ $ make             : chr  "alfa-romero" "alfa-romero" "alfa-romero" "audi" ...
+ $ fuel.type        : chr  "gas" "gas" "gas" "gas" ...
+ $ aspiration       : chr  "std" "std" "std" "std" ...
+ $ num.of.doors     : chr  "two" "two" "two" "four" ...
+ $ body.style       : chr  "convertible" "convertible" "hatchback" "sedan" ...
+ $ drive.wheels     : chr  "rwd" "rwd" "rwd" "fwd" ...
+ $ engine.location  : chr  "front" "front" "front" "front" ...
+ $ wheel.base       : num  88.6 88.6 94.5 99.8 99.4 ...
+ $ length           : num  169 169 171 177 177 ...
+ $ width            : num  64.1 64.1 65.5 66.2 66.4 66.3 71.4 71.4 71.4 67.9 ...
+ $ height           : num  48.8 48.8 52.4 54.3 54.3 53.1 55.7 55.7 55.9 52 ...
+ $ curb.weight      : int  2548 2548 2823 2337 2824 2507 2844 2954 3086 3053 ...
+ $ engine.type      : chr  "dohc" "dohc" "ohcv" "ohc" ...
+ $ num.of.cylinders : chr  "four" "four" "six" "four" ...
+ $ engine.size      : int  130 130 152 109 136 136 136 136 131 131 ...
+ $ fuel.system      : chr  "mpfi" "mpfi" "mpfi" "mpfi" ...
+ $ bore             : chr  "3.47" "3.47" "2.68" "3.19" ...
+ $ stroke           : chr  "2.68" "2.68" "3.47" "3.40" ...
+ $ compression.ratio: num  9 9 9 10 8 8.5 8.5 8.5 8.3 7 ...
+ $ horsepower       : chr  "111" "111" "154" "102" ...
+ $ peak.rpm         : chr  "5000" "5000" "5000" "5500" ...
+ $ city.mpg         : int  21 21 19 24 18 19 19 19 17 16 ...
+ $ highway.mpg      : int  27 27 26 30 22 25 25 25 20 22 ...
+ $ price            : chr  "13495" "16500" "16500" "13950" ...
+normalized.losses 41 
+make 0 
+fuel.type 0 
+aspiration 0 
+num.of.doors 2 
+body.style 0 
+drive.wheels 0 
+engine.location 0 
+engine.type 0 
+num.of.cylinders 0 
+fuel.system 0 
+bore 4 
+stroke 4 
+horsepower 2 
+peak.rpm 2 
+price 4 
+[1] 195  25
+'data.frame':	195 obs. of  5 variables:
+ $ price     : num  13495 16500 16500 13950 17450 ...
+ $ bore      : num  3.47 3.47 2.68 3.19 3.19 3.19 3.19 3.19 3.13 3.5 ...
+ $ stroke    : num  2.68 2.68 3.47 3.4 3.4 3.4 3.4 3.4 3.4 2.8 ...
+ $ horsepower: num  111 111 154 102 115 110 110 110 140 101 ...
+ $ peak.rpm  : num  5000 5000 5000 5500 5500 5500 5500 5500 5500 5800 ...
+
+ eight   five   four    six  three twelve 
+     4     10    155     24      1      1 
+
+eight_twelve     five_six   three_four 
+           5           34          156 
+
+convertible     hardtop   hatchback 
+          6           8          63 
+      sedan       wagon 
+         94          24 
+
+hardtop_convert       hatchback 
+             14              63 
+          sedan           wagon 
+             94              24 
+       V1  V2 V3  V4  V5   V6  V7  V8 V9 V10
+1 1122334 A11  6 A34 A43 1169 A65 A75  4 A93
+2 6156361 A12 48 A32 A43 5951 A61 A73  2 A92
+3 2051359 A14 12 A34 A46 2096 A61 A74  2 A93
+4 8740590 A11 42 A32 A42 7882 A61 A74  2 A93
+5 3924540 A11 24 A33 A40 4870 A61 A73  3 A93
+   V11 V12  V13 V14  V15  V16 V17  V18 V19
+1 A101   4 A121  67 A143 A152   2 A173   1
+2 A101   2 A121  22 A143 A152   1 A173   1
+3 A101   3 A121  49 A143 A152   1 A172   2
+4 A103   4 A122  45 A143 A153   1 A173   2
+5 A101   4 A124  53 A143 A153   2 A173   2
+   V20  V21 V22
+1 A192 A201   1
+2 A191 A201   2
+3 A191 A201   1
+4 A191 A201   1
+5 A191 A201   2
+  Customer_ID checking_account_status
+1     1122334                     A11
+2     6156361                     A12
+3     2051359                     A14
+4     8740590                     A11
+5     3924540                     A11
+  loan_duration_mo credit_history purpose
+1                6            A34     A43
+2               48            A32     A43
+3               12            A34     A46
+4               42            A32     A42
+5               24            A33     A40
+  loan_amount savings_account_balance
+1        1169                     A65
+2        5951                     A61
+3        2096                     A61
+4        7882                     A61
+5        4870                     A61
+  time_employed_yrs payment_pcnt_income
+1               A75                   4
+2               A73                   2
+3               A74                   2
+4               A74                   2
+5               A73                   3
+  gender_status other_signators
+1           A93            A101
+2           A92            A101
+3           A93            A101
+4           A93            A103
+5           A93            A101
+  time_in_residence property age_yrs
+1                 4     A121      67
+2                 2     A121      22
+3                 3     A121      49
+4                 4     A122      45
+5                 4     A124      53
+  other_credit_outstanding home_ownership
+1                     A143           A152
+2                     A143           A152
+3                     A143           A152
+4                     A143           A153
+5                     A143           A153
+  number_loans job_category dependents
+1            2         A173          1
+2            1         A173          1
+3            1         A172          2
+4            1         A173          2
+5            2         A173          2
+  telephone foreign_worker bad_credit
+1      A192           A201          1
+2      A191           A201          2
+3      A191           A201          1
+4      A191           A201          1
+5      A191           A201          2
+  Customer_ID checking_account_status
+1     1122334                  < 0 DM
+2     6156361              0 - 200 DM
+3     2051359                    none
+4     8740590                  < 0 DM
+5     3924540                  < 0 DM
+  loan_duration_mo
+1                6
+2               48
+3               12
+4               42
+5               24
+                           credit_history
+1 critical account - other non-bank loans
+2                      current loans paid
+3 critical account - other non-bank loans
+4                      current loans paid
+5                     past payment delays
+              purpose loan_amount
+1    radio/television        1169
+2    radio/television        5951
+3           education        2096
+4 furniture/equipment        7882
+5           car (new)        4870
+  savings_account_balance time_employed_yrs
+1            unknown/none        >= 7 years
+2                < 100 DM       1 - 4 years
+3                < 100 DM       4 - 7 years
+4                < 100 DM       4 - 7 years
+5                < 100 DM       1 - 4 years
+  payment_pcnt_income
+1                   4
+2                   2
+3                   2
+4                   2
+5                   3
+                      gender_status
+1                       male-single
+2 female-divorced/separated/married
+3                       male-single
+4                       male-single
+5                       male-single
+  other_signators time_in_residence
+1            none                 4
+2            none                 2
+3            none                 3
+4       guarantor                 4
+5            none                 4
+                                 property
+1                             real estate
+2                             real estate
+3                             real estate
+4 building society savings/life insurance
+5                            unknown-none
+  age_yrs other_credit_outstanding
+1      67                     none
+2      22                     none
+3      49                     none
+4      45                     none
+5      53                     none
+  home_ownership number_loans
+1            own            2
+2            own            1
+3            own            1
+4       for free            1
+5       for free            2
+        job_category dependents telephone
+1            skilled          1       yes
+2            skilled          1      none
+3 unskilled-resident          2      none
+4            skilled          2      none
+5            skilled          2      none
+  foreign_worker bad_credit
+1            yes          0
+2            yes          1
+3            yes          0
+4            yes          0
+5            yes          1
+[1] 1012   22
+[1] 1000   22
+[1] 1000   22
+
+Processing end date and time
+Sun Jun 30 11:11:21 2019
+
+[1] "Total processing time = 9.15 seconds"
