@@ -1,0 +1,281 @@
+   Sepal.Length Sepal.Width Petal.Length Petal.Width
+1           5.1         3.5          1.4         0.2
+2           4.9         3.0          1.4         0.2
+3           4.7         3.2          1.3         0.2
+4           4.6         3.1          1.5         0.2
+5           5.0         3.6          1.4         0.2
+6           5.4         3.9          1.7         0.4
+7           4.6         3.4          1.4         0.3
+8           5.0         3.4          1.5         0.2
+9           4.4         2.9          1.4         0.2
+10          4.9         3.1          1.5         0.1
+   Species
+1   setosa
+2   setosa
+3   setosa
+4   setosa
+5   setosa
+6   setosa
+7   setosa
+8   setosa
+9   setosa
+10  setosa
+[1] 51  5
+[1] 99  5
+   Sepal.Length Sepal.Width Petal.Length Petal.Width
+3    -1.2646501   0.4563512    -1.348274   -1.287390
+5    -0.9016267   1.4161001    -1.293220   -1.287390
+6    -0.4175955   2.1359118    -1.128059   -1.027876
+9    -1.6276734  -0.2634605    -1.293220   -1.287390
+10   -1.0226345   0.2164140    -1.238167   -1.417146
+11   -0.4175955   1.6560373    -1.238167   -1.287390
+# weights:  403
+initial  value 42.400425 
+iter  10 value 1.948202
+iter  20 value 0.015199
+final  value 0.000097 
+converged
+   setosa   versicolor    virginica
+1       1 1.129989e-21 2.716431e-64
+2       1 2.872888e-18 2.698407e-62
+4       1 8.403042e-18 2.299975e-61
+7       1 1.148872e-19 2.891180e-62
+8       1 2.674337e-21 5.680885e-64
+12      1 1.625591e-20 4.273428e-63
+   Sepal.Length Sepal.Width Petal.Length Petal.Width
+1    -0.7806189  1.17616289    -1.293220   -1.287390
+2    -1.0226345 -0.02352326    -1.293220   -1.287390
+4    -1.3856579  0.21641397    -1.238167   -1.287390
+7    -1.3856579  0.93622566    -1.293220   -1.157633
+8    -0.9016267  0.93622566    -1.238167   -1.287390
+12   -1.1436423  0.93622566    -1.183113   -1.287390
+   Species scores
+1   setosa setosa
+2   setosa setosa
+4   setosa setosa
+7   setosa setosa
+8   setosa setosa
+12  setosa setosa
+            Predicted
+Actual       setosa versicolor virginica
+  setosa         33          0         0
+  versicolor      0         30         3
+  virginica       0          6        27
+
+Accuracy =  0.909 
+ 
+          setosa versicolor virginica
+Precision      1      0.909     0.818
+Recall         1      0.833     0.900
+F1             1      0.870     0.857
+Neural Network 
+
+51 samples
+ 4 predictor
+ 3 classes: 'setosa', 'versicolor', 'virginica' 
+
+No pre-processing
+Resampling: Cross-Validated (10 fold) 
+Summary of sample sizes: 47, 46, 46, 45, 46, 45, ... 
+Resampling results:
+
+  Accuracy   Kappa    
+  0.8983333  0.8425579
+
+Tuning parameter 'size' was held constant at a value of
+ 50
+Tuning parameter 'decay' was held constant at a
+ value of 0
+              Overall   setosa versicolor virginica
+Sepal.Length 16.31944 16.31944   16.31944  16.31944
+Sepal.Width  20.27989 20.27989   20.27989  20.27989
+Petal.Length 38.09340 38.09340   38.09340  38.09340
+Petal.Width  25.30727 25.30727   25.30727  25.30727
+# weights:  353
+initial  value 63.510365 
+iter  10 value 2.019559
+iter  20 value 0.020646
+final  value 0.000092 
+converged
+            Predicted
+Actual       setosa versicolor virginica
+  setosa         33          0         0
+  versicolor      0         30         3
+  virginica       0          6        27
+
+Accuracy =  0.909 
+ 
+          setosa versicolor virginica
+Precision      1      0.909     0.818
+Recall         1      0.833     0.900
+F1             1      0.870     0.857
+[1] 1000   16
+ [1] "checking_account_status"  "loan_duration_mo"        
+ [3] "credit_history"           "loan_amount"             
+ [5] "savings_account_balance"  "time_employed_yrs"       
+ [7] "payment_pcnt_income"      "time_in_residence"       
+ [9] "property"                 "age_yrs"                 
+[11] "other_credit_outstanding" "number_loans"            
+[13] "job_category"             "dependents"              
+[15] "telephone"                "bad_credit"              
+  checking_account_status loan_duration_mo
+1                  < 0 DM                6
+2              0 - 200 DM               48
+3                    none               12
+4                  < 0 DM               42
+5                  < 0 DM               24
+6                    none               36
+                           credit_history loan_amount
+1 critical account - other non-bank loans        1169
+2                      current loans paid        5951
+3 critical account - other non-bank loans        2096
+4                      current loans paid        7882
+5                     past payment delays        4870
+6                      current loans paid        9055
+  savings_account_balance time_employed_yrs
+1            unknown/none        >= 7 years
+2                < 100 DM       1 - 4 years
+3                < 100 DM       4 - 7 years
+4                < 100 DM       4 - 7 years
+5                < 100 DM       1 - 4 years
+6            unknown/none       1 - 4 years
+  payment_pcnt_income time_in_residence
+1                   4                 4
+2                   2                 2
+3                   2                 3
+4                   2                 4
+5                   3                 4
+6                   2                 4
+                                 property age_yrs
+1                             real estate      67
+2                             real estate      22
+3                             real estate      49
+4 building society savings/life insurance      45
+5                            unknown-none      53
+6                            unknown-none      35
+  other_credit_outstanding number_loans       job_category
+1                     none            2            skilled
+2                     none            1            skilled
+3                     none            1 unskilled-resident
+4                     none            1            skilled
+5                     none            2            skilled
+6                     none            1 unskilled-resident
+  dependents telephone bad_credit
+1          1       yes          0
+2          1      none          1
+3          2      none          0
+4          2      none          0
+5          2      none          1
+6          2       yes          0
+  loan_duration_mo loan_amount payment_pcnt_income
+1       -1.2358595  -0.7447588          0.91801781
+2        2.2470700   0.9493418         -0.86974813
+3       -0.7382981  -0.4163541         -0.86974813
+4        1.7495086   1.6334296         -0.86974813
+5        0.2568246   0.5663801          0.02413484
+6        1.2519473   2.0489838         -0.86974813
+  time_in_residence     age_yrs number_loans dependents
+1         1.0464631  2.76507291    1.0265652 -0.4280754
+2        -0.7655942 -1.19080809   -0.7045734 -0.4280754
+3         0.1404344  1.18272051   -0.7045734  2.3337012
+4         1.0464631  0.83108664   -0.7045734  2.3337012
+5         1.0464631  1.53435438    1.0265652  2.3337012
+6         1.0464631 -0.04799802   -0.7045734  2.3337012
+[1] good bad  good good bad 
+Levels: bad good
+Neural Network 
+
+1000 samples
+  15 predictor
+   2 classes: 'bad', 'good' 
+
+No pre-processing
+Resampling: Cross-Validated (5 fold) 
+Summary of sample sizes: 800, 800, 800, 800, 800 
+Resampling results across tuning parameters:
+
+  size  decay  ROC        Sens       Spec     
+   3    0.1    0.7420238  0.5933333  0.7457143
+   3    0.5    0.7700476  0.6166667  0.7642857
+   3    1.0    0.7594286  0.6233333  0.7428571
+   6    0.1    0.6938571  0.5366667  0.7671429
+   6    0.5    0.7723810  0.6266667  0.7657143
+   6    1.0    0.7618810  0.6266667  0.7485714
+  12    0.1    0.7145714  0.5366667  0.7471429
+  12    0.5    0.7705714  0.6333333  0.7642857
+  12    1.0    0.7625000  0.6233333  0.7457143
+  25    0.1    0.7464048  0.5533333  0.7842857
+  25    0.5    0.7732857  0.6233333  0.7657143
+  25    1.0    0.7636429  0.6333333  0.7457143
+
+ROC was used to select the optimal model using the
+ largest value.
+The final values used for the model were size = 25
+ and decay = 0.5.
+Neural Network 
+
+1000 samples
+  15 predictor
+   2 classes: 'bad', 'good' 
+
+No pre-processing
+Resampling: Cross-Validated (5 fold) 
+Summary of sample sizes: 800, 800, 800, 800, 800 
+Resampling results across tuning parameters:
+
+  size  decay  AUC        Precision  Recall     F        
+   3    0.1    0.5386064  0.5007432  0.5933333  0.5423183
+   3    0.5    0.5627767  0.5297212  0.6166667  0.5690259
+   3    1.0    0.5428024  0.5120683  0.6233333  0.5612927
+   6    0.1    0.4939690  0.4964216  0.5366667  0.5137764
+   6    0.5    0.5638955  0.5356504  0.6266667  0.5768210
+   6    1.0    0.5453537  0.5179765  0.6266667  0.5665776
+  12    0.1    0.5038745  0.4775804  0.5366667  0.5050222
+  12    0.5    0.5569302  0.5357946  0.6333333  0.5800781
+  12    1.0    0.5463437  0.5139014  0.6233333  0.5626992
+  25    0.1    0.5476296  0.5248877  0.5533333  0.5380399
+  25    0.5    0.5630878  0.5340135  0.6233333  0.5747193
+  25    1.0    0.5465732  0.5177198  0.6333333  0.5689930
+
+Recall was used to select the optimal model using
+ the largest value.
+The final values used for the model were size = 12
+ and decay = 0.5.
+nnet variable importance
+
+  only 20 most important variables shown (out of 31)
+
+                                                      Overall
+checking_account_statusnone                            100.00
+credit_historycritical account - other non-bank loans   70.73
+time_employed_yrs4 - 7 years                            69.51
+time_in_residence                                       65.40
+other_credit_outstandingnone                            45.52
+savings_account_balanceunknown/none                     43.95
+propertycar or other                                    37.33
+savings_account_balance>= 1000 DM                       34.69
+dependents                                              31.18
+checking_account_status> 200 DM or salary assignment    26.50
+checking_account_status0 - 200 DM                       25.50
+propertyunknown-none                                    25.39
+credit_historyno credit - paid                          19.43
+loan_amount                                             17.90
+number_loans                                            17.29
+loan_duration_mo                                        17.21
+credit_historypast payment delays                       17.15
+job_categoryskilled                                     14.48
+job_categoryunskilled-resident                          11.92
+age_yrs                                                 11.08
+    ROC  Sens  Spec size decay Resample
+1 0.781 0.683 0.721    3   0.5    Fold1
+2 0.780 0.633 0.779    3   0.5    Fold2
+3 0.779 0.583 0.821    3   0.5    Fold3
+4 0.784 0.683 0.771    3   0.5    Fold4
+5 0.718 0.517 0.743    3   0.5    Fold5
+6 0.768 0.620 0.767    3   0.5     Mean
+7 0.028 0.071 0.038    3   0.5      STD
+
+Processing end date and time
+Sat Jun 29 14:51:40 2019
+
+[1] "Total processing time = 47.87 seconds"
