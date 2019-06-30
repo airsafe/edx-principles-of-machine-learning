@@ -8,6 +8,13 @@ timeStart = Sys.time()
 # Note: Searching R help files - RSiteSearch("character string")
 # Note: To clear console, use CTRL + L 
 
+
+# INSTALLING SPECIAL PACKAGES
+# if("<package_name>" %in% rownames(installed.packages()) == FALSE) 
+# {install.packages("<package_name>")}# Added due to error
+# library(<package_name>)
+# ====================
+
 # Visualizing Data for Regression
 # In this lab, you will learn how to use Python to visualize and explore data. 
 # This process is also known as exploratory data analysis.
