@@ -61,6 +61,11 @@ if("MLmetrics" %in% rownames(installed.packages()) == FALSE)
 {install.packages("MLmetrics")}
 library(MLmetrics)
 
+# Had to add this package after initially getting an error
+if("kernlab" %in% rownames(installed.packages()) == FALSE) 
+{install.packages("kernlab")}
+library(kernlabs)
+
 options(repr.plot.width=4, repr.plot.height=4) # Set the initial plot area dimensions
 
 # To get a feel for these data, you will now load and plot them. 
