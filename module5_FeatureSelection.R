@@ -1,5 +1,5 @@
 # Processing start time
-sink('feature_selectoin_output.txt')
+sink('feature_selection_output.txt')
 timeStart = Sys.time()
 
 # ADMINISTRATIVE NOTES
