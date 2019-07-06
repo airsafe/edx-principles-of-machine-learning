@@ -1,0 +1,228 @@
+[1] "No CustomerID is duplicated more than once"
+[1] "Only true duplicates were removed"
+[1] "All cases complete, no missing values"
+  record_num CustomerID Title FirstName MiddleName LastName
+1          1      11000             Jon          V     Yang
+2          2      11001          Eugene          L    Huang
+3          3      11002           Ruben              Torres
+4          4      11003         Christy                 Zhu
+5          5      11004       Elizabeth             Johnson
+6          6      11005           Julio                Ruiz
+  Suffix        AddressLine1 AddressLine2          City
+1            3761 N. 14th St                Rockhampton
+2                 2243 W St.                    Seaford
+3           5844 Linden Land                     Hobart
+4           1825 Village Pl.                 North Ryde
+5        7553 Harness Circle                 Wollongong
+6        7305 Humphrey Drive              East Brisbane
+  StateProvinceName CountryRegionName PostalCode
+1        Queensland         Australia       4700
+2          Victoria         Australia       3198
+3          Tasmania         Australia       7001
+4   New South Wales         Australia       2113
+5   New South Wales         Australia       2500
+6        Queensland         Australia       4169
+          PhoneNumber  BirthDate  Education   Occupation
+1 1 (11) 500 555-0162 1966-04-08 Bachelors  Professional
+2 1 (11) 500 555-0110 1965-05-14 Bachelors  Professional
+3 1 (11) 500 555-0184 1965-08-12 Bachelors  Professional
+4 1 (11) 500 555-0162 1968-02-15 Bachelors  Professional
+5 1 (11) 500 555-0131 1968-08-08 Bachelors  Professional
+6 1 (11) 500 555-0151 1965-08-05 Bachelors  Professional
+  Gender MaritalStatus HomeOwnerFlag NumberCarsOwned
+1      M             M             1               0
+2      M             S             0               1
+3      M             M             1               1
+4      F             S             0               1
+5      F             S             1               4
+6      M             S             1               1
+  NumberChildrenAtHome TotalChildren YearlyIncome BikeBuyer
+1                    0             2       137947         0
+2                    3             3       101141         1
+3                    3             3        91945         0
+4                    0             0        86688         0
+5                    5             5        92771         1
+6                    0             0       103199         1
+  AveMonthSpend   Age
+1            89 31.73
+2           117 32.64
+3           123 32.39
+4            50 29.88
+5            95 29.40
+6            78 32.41
+'data.frame':	16404 obs. of  27 variables:
+ $ record_num          : int  1 2 3 4 5 6 7 8 9 10 ...
+ $ CustomerID          : int  11000 11001 11002 11003 11004 11005 11006 11007 11008 11009 ...
+ $ Title               : Factor w/ 6 levels "","Mr.","Mrs.",..: 1 1 1 1 1 1 1 1 1 1 ...
+ $ FirstName           : Factor w/ 662 levels "Aaron","Abby",..: 327 224 561 141 212 345 292 429 546 580 ...
+ $ MiddleName          : Factor w/ 45 levels "","A","A.","B",..: 41 24 1 1 1 1 12 1 1 6 ...
+ $ LastName            : Factor w/ 363 levels "Adams","Agbonile",..: 351 93 312 362 104 217 8 141 323 38 ...
+ $ Suffix              : Factor w/ 2 levels "","Jr.": 1 1 1 1 1 1 1 1 1 1 ...
+ $ AddressLine1        : Factor w/ 11879 levels "035, boulevard du Montparnasse",..: 3456 1687 5877 1104 7883 7592 2135 10031 6394 3551 ...
+ $ AddressLine2        : Factor w/ 155 levels "","# 1","# 101",..: 1 1 1 1 1 1 1 1 1 1 ...
+ $ City                : Factor w/ 270 levels "Ballard","Baltimore",..: 206 226 120 176 265 94 154 258 11 118 ...
+ $ StateProvinceName   : Factor w/ 52 levels "Alabama","Alberta",..: 35 48 43 27 27 35 27 48 48 35 ...
+ $ CountryRegionName   : Factor w/ 6 levels "Australia","Canada",..: 1 1 1 1 1 1 1 1 1 1 ...
+ $ PostalCode          : Factor w/ 324 levels "1002","10210",..: 82 46 117 25 35 69 20 49 58 81 ...
+ $ PhoneNumber         : Factor w/ 7949 levels "1 (11) 500 555-0110",..: 53 1 75 53 22 42 75 17 55 1 ...
+ $ BirthDate           : Factor w/ 7896 levels "1910-08-13","1911-08-13",..: 4879 4664 4723 5326 5445 4717 4802 4419 4465 4391 ...
+ $ Education           : Factor w/ 5 levels "Bachelors ","Graduate Degree",..: 1 1 1 1 1 1 1 1 1 1 ...
+ $ Occupation          : Factor w/ 5 levels "Clerical","Management",..: 4 4 4 4 4 4 4 4 4 4 ...
+ $ Gender              : Factor w/ 2 levels "F","M": 2 2 2 1 1 2 1 2 1 2 ...
+ $ MaritalStatus       : Factor w/ 2 levels "M","S": 1 2 1 2 2 2 2 1 2 2 ...
+ $ HomeOwnerFlag       : int  1 0 1 0 1 1 1 1 1 0 ...
+ $ NumberCarsOwned     : int  0 1 1 1 4 1 1 2 3 1 ...
+ $ NumberChildrenAtHome: int  0 3 3 0 5 0 0 3 4 0 ...
+ $ TotalChildren       : int  2 3 3 0 5 0 0 3 4 0 ...
+ $ YearlyIncome        : int  137947 101141 91945 86688 92771 103199 84756 109759 88005 106399 ...
+ $ BikeBuyer           : int  0 1 0 0 1 1 1 1 1 0 ...
+ $ AveMonthSpend       : int  89 117 123 50 95 78 54 130 85 74 ...
+ $ Age                 : num  31.7 32.6 32.4 29.9 29.4 ...
+[1] 500  23
+'data.frame':	500 obs. of  23 variables:
+ $ CustomerID          : int  18988 29135 12156 13749 27780 16375 16109 15606 20888 20716 ...
+ $ Title               : Factor w/ 3 levels "","Mr.","Ms.": 1 1 1 1 1 1 1 1 1 1 ...
+ $ FirstName           : Factor w/ 307 levels "Aaron","Abigail",..: 79 3 41 165 68 116 3 202 72 181 ...
+ $ MiddleName          : Factor w/ 25 levels "","A","A.","B",..: 2 5 1 5 2 1 13 5 18 24 ...
+ $ LastName            : Factor w/ 198 levels "Adams","Alexander",..: 13 3 125 4 7 66 175 121 124 10 ...
+ $ Suffix              : Factor w/ 2 levels "","Jr.": 1 1 1 1 1 1 1 1 1 1 ...
+ $ AddressLine1        : Factor w/ 493 levels "1 Smiling Tree Court",..: 384 137 140 391 159 223 432 375 153 486 ...
+ $ AddressLine2        : Factor w/ 10 levels "","# 235","# 61",..: 1 1 1 1 1 1 1 5 1 1 ...
+ $ City                : Factor w/ 187 levels "Ballard","Beaverton",..: 54 62 17 19 43 161 103 35 169 63 ...
+ $ StateProvinceName   : Factor w/ 27 levels "Bayern","Brandenburg",..: 4 3 4 4 14 4 3 24 20 15 ...
+ $ CountryRegionName   : Factor w/ 6 levels "Australia","Canada",..: 6 2 6 6 3 6 2 1 3 4 ...
+ $ PostalCode          : Factor w/ 204 levels "1002","14111",..: 125 185 94 116 54 102 190 34 112 22 ...
+ $ PhoneNumber         : Factor w/ 358 levels "1 (11) 500 555-0110",..: 96 137 183 115 13 109 133 53 73 72 ...
+ $ BirthDate           : Factor w/ 491 levels "1/11/1941","1/11/1963",..: 22 66 3 468 188 426 391 113 13 448 ...
+ $ Education           : Factor w/ 5 levels "Bachelors ","Graduate Degree",..: 1 1 2 2 3 4 1 1 5 1 ...
+ $ Occupation          : Factor w/ 5 levels "Clerical","Management",..: 2 5 2 5 3 1 5 4 3 5 ...
+ $ Gender              : Factor w/ 2 levels "F","M": 1 2 1 2 1 1 2 2 2 1 ...
+ $ MaritalStatus       : Factor w/ 2 levels "M","S": 2 1 1 1 1 1 2 1 2 1 ...
+ $ HomeOwnerFlag       : int  0 1 1 1 1 1 1 1 1 1 ...
+ $ NumberCarsOwned     : int  2 2 2 0 1 1 2 3 1 1 ...
+ $ NumberChildrenAtHome: int  0 2 0 0 2 0 2 4 4 1 ...
+ $ TotalChildren       : int  5 4 4 4 2 1 4 4 4 1 ...
+ $ YearlyIncome        : int  86931 100125 103985 127161 21876 44467 77702 99418 13522 46264 ...
+integer(0)
+[1] "The following 4 training set Customer IDs were found in test set:"
+[1] "15407" "15778" "18593" "26497"
+[1] "These records will be removed from the training set"
+[1] 16400    27
+[1] 12300    27
+[1] 4100   27
+[1] "Base model with pretrain data"
+
+Call:
+lm(formula = AveMonthSpend_scaled ~ YearlyIncome_scaled + MaritalStatus + 
+    Occupation + HomeOwnerFlag + Education + Gender + NumberChildrenAtHome + 
+    TotalChildren + NumberCarsOwned + Age_scaled, data = pretrain)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.66033 -0.03675  0.00326  0.04069  0.29808 
+
+Coefficients:
+                               Estimate Std. Error  t value
+(Intercept)                   3.916e+00  2.635e-03 1486.248
+YearlyIncome_scaled           1.084e-01  1.266e-03   85.641
+MaritalStatusS               -7.964e-02  1.285e-03  -61.991
+OccupationManagement         -4.155e-03  3.155e-03   -1.317
+OccupationManual              3.521e-02  2.682e-03   13.127
+OccupationProfessional        2.161e-02  2.456e-03    8.798
+OccupationSkilled Manual      9.552e-03  2.093e-03    4.564
+HomeOwnerFlag                 5.490e-03  1.368e-03    4.014
+EducationGraduate Degree     -1.456e-02  1.948e-03   -7.475
+EducationHigh School         -7.540e-03  2.038e-03   -3.700
+EducationPartial College     -3.598e-03  1.739e-03   -2.069
+EducationPartial High School  8.416e-03  2.830e-03    2.973
+GenderM                       4.039e-01  1.235e-03  327.140
+NumberChildrenAtHome          1.362e-01  6.235e-04  218.478
+TotalChildren                -4.909e-05  6.215e-04   -0.079
+NumberCarsOwned              -7.228e-03  7.464e-04   -9.683
+Age_scaled                   -1.225e-02  8.068e-04  -15.178
+                             Pr(>|t|)    
+(Intercept)                   < 2e-16 ***
+YearlyIncome_scaled           < 2e-16 ***
+MaritalStatusS                < 2e-16 ***
+OccupationManagement         0.187831    
+OccupationManual              < 2e-16 ***
+OccupationProfessional        < 2e-16 ***
+OccupationSkilled Manual     5.06e-06 ***
+HomeOwnerFlag                6.01e-05 ***
+EducationGraduate Degree     8.23e-14 ***
+EducationHigh School         0.000217 ***
+EducationPartial College     0.038520 *  
+EducationPartial High School 0.002950 ** 
+GenderM                       < 2e-16 ***
+NumberChildrenAtHome          < 2e-16 ***
+TotalChildren                0.937042    
+NumberCarsOwned               < 2e-16 ***
+Age_scaled                    < 2e-16 ***
+---
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.06536 on 12283 degrees of freedom
+Multiple R-squared:  0.9637,	Adjusted R-squared:  0.9636 
+F-statistic: 2.037e+04 on 16 and 12283 DF,  p-value: < 2.2e-16
+
+Mean Square Error      =  0.004 
+Root Mean Square Error =  0.0633 
+Mean Absolute Error    =  0.0484 
+Median Absolute Error  =  0.0406 
+R^2                    =  0.9637 
+Adjusted R^2           =  0.9636 
+
+Call:
+lm(formula = AveMonthSpend_scaled ~ YearlyIncome_scaled + MaritalStatus + 
+    Occupation + Gender + NumberChildrenAtHome + NumberCarsOwned + 
+    Age_scaled, data = pretrain)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.65043 -0.03676  0.00355  0.04094  0.29147 
+
+Coefficients:
+                           Estimate Std. Error  t value
+(Intercept)               3.9135577  0.0019965 1960.236
+YearlyIncome_scaled       0.1059971  0.0011793   89.880
+MaritalStatusS           -0.0808172  0.0012347  -65.457
+OccupationManagement     -0.0064767  0.0029205   -2.218
+OccupationManual          0.0320000  0.0026508   12.072
+OccupationProfessional    0.0206623  0.0023764    8.695
+OccupationSkilled Manual  0.0085797  0.0020446    4.196
+GenderM                   0.4045144  0.0012296  328.981
+NumberChildrenAtHome      0.1366683  0.0004572  298.935
+NumberCarsOwned          -0.0055364  0.0006190   -8.944
+Age_scaled               -0.0120990  0.0006578  -18.393
+                         Pr(>|t|)    
+(Intercept)               < 2e-16 ***
+YearlyIncome_scaled       < 2e-16 ***
+MaritalStatusS            < 2e-16 ***
+OccupationManagement       0.0266 *  
+OccupationManual          < 2e-16 ***
+OccupationProfessional    < 2e-16 ***
+OccupationSkilled Manual 2.73e-05 ***
+GenderM                   < 2e-16 ***
+NumberChildrenAtHome      < 2e-16 ***
+NumberCarsOwned           < 2e-16 ***
+Age_scaled                < 2e-16 ***
+---
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.06562 on 12289 degrees of freedom
+Multiple R-squared:  0.9634,	Adjusted R-squared:  0.9633 
+F-statistic: 3.232e+04 on 10 and 12289 DF,  p-value: < 2.2e-16
+
+Mean Square Error      =  0.0041 
+Root Mean Square Error =  0.0637 
+Mean Absolute Error    =  0.0487 
+Median Absolute Error  =  0.0402 
+R^2                    =  0.9634 
+Adjusted R^2           =  0.9633 
+
+Processing end date and time
+Fri Jul  5 17:29:37 2019
+
+[1] "Total processing time = 4.1 seconds"
