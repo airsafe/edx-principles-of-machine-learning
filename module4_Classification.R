@@ -95,13 +95,13 @@ plot.logistic(0)
 
  # y_hat = beta_0 + beta_1*x
 
-# Now, depending on the value of $\hat{y}$ we want to classify the output from a logistic regression model as either `0` or `1`. 
+# Now, depending on the value of y_hat we want to classify the output from a logistic regression model as either `0` or `1`. 
 # Substituting the linear model into the logistic function creates the following expression:
 
 #        F(y_hat) = 1/(1 + e^(-kappa(beta_0 + beta_1*x))
 
 # In this way we transform the continuous output of the linear model defined on:
-#    -infinity <= y_hat <= infinity to a binary response, -1 <= F(y_hat) <= 1
+#    -infinity <= y_hat <= infinity to a binary response, 0 <= F(y_hat) <= 1
 
 ## Load and prepare the data set
 
@@ -173,8 +173,10 @@ dim(test)
 
 ## Scale numeric features
 
-# Scaling of numeric features is an important step when preparing data for training a machine learning model. The code in the cell below does the following:
-# 1. Computes a caret package `preProcess` object for centering and scaling the data. Notice that these computations are done only with the training data. 
+# Scaling of numeric features is an important step when preparing data for training a machine learning model. 
+# The code in the cell below does the following:
+# 1. Computes a caret package `preProcess` object for centering and scaling the data. 
+# Notice that these computations are done only with the training data. 
 # 2. The transformations are applied to both the training and test dataset. 
 # 
 # Execute this code.
@@ -188,7 +190,8 @@ head(training[,num_cols])
 
 ## Construct the logistic regression model
 
-# Now, it is time to compute the logistic regression model. The code in the cell below using the R generalized linear model or `glm` function to compute a model object as follows:
+# Now, it is time to compute the logistic regression model. 
+# The code in the cell below using the R generalized linear model or `glm` function to compute a model object as follows:
 # 1. The formula for the label vs. the features is defined. 
 # 2. Since this is logistic regression, the Binomial distribution is specified for the response.
 # 
@@ -269,7 +272,8 @@ test[1:20, c('bad_credit','probs','score')]
 # When creating a confusion matrix it is important to understand and maintain a convention for which differentiating positive and negative label values. 
 # The usual convention is to call the (1) case positive and the (0) case negative. 
 # 
-# Notice that there is an ambiguity in which case is considered positive and which is considered negative when the confusion matrix is computed. Whenever you examine a confusion matrix it is a good idea to spend a moment and decide which case is which. This step will help you relate the results to the problem at hand. 
+# Notice that there is an ambiguity in which case is considered positive and which is considered negative when the confusion matrix is computed. 
+# Whenever you examine a confusion matrix it is a good idea to spend a moment and decide which case is which. This step will help you relate the results to the problem at hand. 
 # 
 # **Accuracy**
 # 
@@ -292,16 +296,19 @@ test[1:20, c('bad_credit','probs','score')]
 
 #       Precision = M_(i,j)/ (Sum_j  M_(i,j))
 
-# For example, the precision statistic is the number of correctly classified positive cases for the label value divided by all the cases in the column. 
+# For example, the precision statistic is the number of correctly classified positive cases for the label value 
+# divided by all the cases in the column. 
 
 # **Recall**  
 # 
-# Recall or **sensitivity** is the fraction of cases of a label value correctly classified out of all cases that actually have that label value. 
+# Recall or **sensitivity** is the fraction of cases of a label value correctly classified out of all cases that actually  
+# have that label value. 
 # We can express recall by the following relationship:
 
-#       Recall = \frac{M_{i,i}}{\sum_i M_{i,j}}$$
+#       Recall = Recall = M_(i,i)/(Sum_i  M_(i,j))
 
-# For example, the recall statistic is the number of correctly classified positive cases for the label value divided by all the cases in the row. 
+# For example, the recall statistic is the number of correctly classified positive cases for the label value 
+# divided by all the cases in the row. 
 # In this example recall is the **True Positive Rate**. 
 # Thus, recall is sensitive to the number of cases correctly classified for a given true label value. 
 # 
@@ -323,7 +330,8 @@ test[1:20, c('bad_credit','probs','score')]
 
 # **ROC** and **AUC**
 
-# The receiver operating characteristic or ROC is a curve that displays the relationship between the true positive rate on the vertical axis and false positive rate on the horizontal axis. 
+# The receiver operating characteristic or ROC is a curve that displays the relationship between the 
+# true positive rate on the vertical axis and false positive rate on the horizontal axis. 
 # The ROC curve shows the tradeoff between true positive rate and false positive rate. 
 # An example is illustrated below.   
 # 
@@ -350,14 +358,16 @@ test[1:20, c('bad_credit','probs','score')]
 
 # For balanced cases, random guessing gives an AUC or 0.5. 
 # A balanced case has equal numbers of positive and negative cases. 
-# So Bernoulli sampling (random guessing) with a probability $p$ for the positive case, will produce a ROC curve that runs diagonally from $0.0,0.0$ to $1.0,1.0$. 
+# So Bernoulli sampling (random guessing) with a probability $p$ for the positive case, will produce a ROC curve 
+# that runs diagonally from $0.0,0.0$ to $1.0,1.0$. 
 # The area under this triangular region is 0.5. 
 # It is often said that a classifier with an AUC of greater than 0.5 is better than random guessing. 
 # But, **for unbalanced cases this statement is not in true in general**. 
 
 # ****
 # **Note:** The term receive operating characteristic may seem a bit odd in the machine learning context. 
-# This term arose in the early days of radar engineering as a metric to measure the tradeoff between radar signal receiver correctly detecting a target, say an aircraft, and producing a positive response from noise, such as flying birds or clouds. 
+# This term arose in the early days of radar engineering as a metric to measure the tradeoff between radar signal receiver 
+# correctly detecting a target, say an aircraft, and producing a positive response from noise, such as flying birds or clouds. 
 # A radar receiver would be adjusted to the desired operating point along its ROC curve. 
 # ****
 # 
@@ -407,8 +417,9 @@ confusionMatrix(factor(test$score), test$bad_credit)
 #         a) most of the negative cases (good credit) are correctly classified, 191 vs. 19, however, 
 #         b) most positive cases (bad credit) are are scored incorrectly, only 39 correct, vs. 51 incorrect.   
 # 2. The overall accuracy is 0.767t. 
-# However as just observed this is **extremely misleading!**. 
-# In fact the positive cases are poorly classified, and it is these bad credit customers the bank cares most about. This is not an unusually case. Accuracy figures should always be regarded with healthy skepticism.
+#       However as just observed this is **extremely misleading!**. 
+#       In fact the positive cases are poorly classified, and it is these bad credit customers the bank cares most about. 
+#       This is not an unusually case. Accuracy figures should always be regarded with healthy skepticism.
 # 3. The class imbalance is confirmed. 
 # Of the 300 test cases, the majority are negative (good credit) and a minority are positive (bad credit). 
 # 
@@ -453,14 +464,16 @@ ROC_AUC(test)
 
 ## Compute a weighted model
 
-# Recall that a falsely classifying a bad credit risk customer as good costs the bank five times more than classifying a good credit risk customer as bad. 
+# Recall that a falsely classifying a bad credit risk customer as good costs the bank five times more than 
+# classifying a good credit risk customer as bad. 
 # Further, there is significant class imbalance. 
 # Given this situation, the results of the first model are not that good. 
 # There are two reasons for this:
 # 
 # 1. The class imbalance in the label has biased the training of the model. 
-# As you observed from the accuracy of the naive 'classifier' is not that different from the logistic regression model. 
-# 2. Nothing has been done to weight the results toward correctly classifying the bad credit risk customers at the expense of the good credit risk customers.
+#       As you observed from the accuracy of the naive 'classifier' is not that different from the logistic regression model. 
+# 2. Nothing has been done to weight the results toward correctly classifying the bad credit risk 
+#       customers at the expense of the good credit risk customers.
 # 
 # One approach to these problems is to weight the classes when computing the logistic regression model. 
 # The code in the cell below uses a vector that weights each of the training cases. 
@@ -486,7 +499,8 @@ test[1:20, c('bad_credit','probs')]
 
 # By eyeball, the above probabilities are not terribly different from the unweighted model. 
 # 
-# To find if there is any significant difference with the unweighted model, compute the scores, the metrics, and display the metrics by executing the code in the cell below.
+# To find if there is any significant difference with the unweighted model, compute the scores, 
+# the metrics, and display the metrics by executing the code in the cell below.
 
 test = score_model(test, 0.5)
 logistic.eval(test)
@@ -524,12 +538,14 @@ test_threshold = function(test, threshold){
 thresholds = c(0.5, 0.55, 0.60, 0.65)
 for(t in thresholds) test_threshold(test, t) # Iterate over the thresholds
 
-# As the threshold is decreased the number of correctly classified positive cases (bad credit customers) increases at the expense of correctly classifying negative cases (good credit customers). 
+# As the threshold is decreased the number of correctly classified positive cases (bad credit customers) 
+# increases at the expense of correctly classifying negative cases (good credit customers). 
 # At the same time, accuracy decreases. 
 # However, as you have observed, accuracy is not a particularly useful metric here. 
 # 
 # Exactly which threshold to pick is a business decision. 
-# Notice that with a threshold value of 0.6 the number of false negatives (misclassified good credit customers) is more than three times that of false positives (misclassified bad credit customers).
+# Notice that with a threshold value of 0.6 the number of false negatives (misclassified good credit customers) 
+# is more than three times that of false positives (misclassified bad credit customers).
 
 ## Summary
 
@@ -540,7 +556,8 @@ for(t in thresholds) test_threshold(test, t) # Iterate over the thresholds
 # 3. Evaluated the performance of the module using multiple metrics. 
 # It is clear that accuracy is not a particularly useful metric here. 
 # The naive 'classifier' produced accuracy that was only somewhat worse as a result of the class imbalance.  
-# The confusion matrix and the precision, recall and F1 statistics gave meaningful measures of model performance, especially when considered together. 
+# The confusion matrix and the precision, recall and F1 statistics gave meaningful measures of model performance, 
+# especially when considered together. 
 # 4. Re-weighted the labels and changed the decision threshold for the re-weighted model. 
 # These steps helped overcome both the class imbalance problem and the asymmetric cost of misclassification to the bank. 
 
